@@ -12,7 +12,10 @@ class MyTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // 设置 TabBar 字体颜色
+        let tabBar = UITabBar.appearance()
+        tabBar.tintColor = UIColor(displayP3Red: 245 / 255.0, green: 90 / 255.0, blue: 93 / 255.0, alpha: 1.0)
+        // 添加子控制器
         addChildViewControllers()
     }
     
@@ -29,7 +32,8 @@ class MyTabBarController: UITabBarController {
         // 设置文字和图片
         childController.tabBarItem.image = UIImage(named: imageName)
         childController.tabBarItem.selectedImage = UIImage(named: selectedImageName)
-        childController.tabBarItem.title = title
+        // 设置导航栏的文字
+        childController.title = title
         // 添加导航控制器为 TabBarController 的子控制器
         let navVC = MyNavigationController(rootViewController: childController)
         addChild(navVC)

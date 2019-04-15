@@ -7,35 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F810B1E22640FAE00165D41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810B1D22640FAE00165D41 /* AppDelegate.swift */; };
-		3F810B2022640FAE00165D41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810B1F22640FAE00165D41 /* ViewController.swift */; };
-		3F810B2322640FAE00165D41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F810B2122640FAE00165D41 /* Main.storyboard */; };
 		3F810B2522640FB100165D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F810B2422640FB100165D41 /* Assets.xcassets */; };
 		3F810B2822640FB100165D41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F810B2622640FB100165D41 /* LaunchScreen.storyboard */; };
-		3F810B302264139700165D41 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810B2F2264139700165D41 /* MyTabBarController.swift */; };
-		3F810B32226414F800165D41 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810B31226414F800165D41 /* MyNavigationController.swift */; };
-		3F810B342264177700165D41 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810B332264177700165D41 /* HomeViewController.swift */; };
-		3F810B362264178900165D41 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810B352264178900165D41 /* VideoViewController.swift */; };
-		3F810B38226417A900165D41 /* HuoshanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810B37226417A900165D41 /* HuoshanViewController.swift */; };
-		3F810B3C22641BC300165D41 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810B3B22641BC300165D41 /* MineViewController.swift */; };
-		3F810B3E2264228F00165D41 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810B3D2264228F00165D41 /* MyTabBar.swift */; };
+		3F810C672264931800165D41 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C4C2264931800165D41 /* HomeViewController.swift */; };
+		3F810C682264931800165D41 /* HuoshanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C512264931800165D41 /* HuoshanViewController.swift */; };
+		3F810C692264931800165D41 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C562264931800165D41 /* MyNavigationController.swift */; };
+		3F810C6A2264931800165D41 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C572264931800165D41 /* MyTabBarController.swift */; };
+		3F810C6B2264931800165D41 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C5A2264931800165D41 /* MyTabBar.swift */; };
+		3F810C6C2264931800165D41 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C5D2264931800165D41 /* MineViewController.swift */; };
+		3F810C6D2264931800165D41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C612264931800165D41 /* AppDelegate.swift */; };
+		3F810C6E2264931800165D41 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C642264931800165D41 /* VideoViewController.swift */; };
+		CD3791129F22E0E7463EA136 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19101F1CFCA44C99A7F957AD /* Pods_News.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19101F1CFCA44C99A7F957AD /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F810B1A22640FAE00165D41 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F810B1D22640FAE00165D41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F810B1F22640FAE00165D41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3F810B2222640FAE00165D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F810B2422640FB100165D41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F810B2722640FB100165D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F810B2922640FB100165D41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F810B2F2264139700165D41 /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
-		3F810B31226414F800165D41 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
-		3F810B332264177700165D41 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		3F810B352264178900165D41 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		3F810B37226417A900165D41 /* HuoshanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuoshanViewController.swift; sourceTree = "<group>"; };
-		3F810B3B22641BC300165D41 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
-		3F810B3D2264228F00165D41 /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+		3F810C4C2264931800165D41 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3F810C512264931800165D41 /* HuoshanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuoshanViewController.swift; sourceTree = "<group>"; };
+		3F810C562264931800165D41 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		3F810C572264931800165D41 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
+		3F810C5A2264931800165D41 /* MyTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+		3F810C5D2264931800165D41 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		3F810C612264931800165D41 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F810C642264931800165D41 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		C5ADCD5596EC3B1F4E90E0A3 /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
+		CEE3D0B1F85E37C537B1627B /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3791129F22E0E7463EA136 /* Pods_News.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E0DE653021A2118BE4B45D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19101F1CFCA44C99A7F957AD /* Pods_News.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3F810B1122640FAE00165D41 = {
 			isa = PBXGroup;
 			children = (
 				3F810B1C22640FAE00165D41 /* News */,
 				3F810B1B22640FAE00165D41 /* Products */,
+				6F24B5CD38143ED0C76770CE /* Pods */,
+				1E0DE653021A2118BE4B45D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,21 +79,204 @@
 		3F810B1C22640FAE00165D41 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				3F810B1D22640FAE00165D41 /* AppDelegate.swift */,
-				3F810B1F22640FAE00165D41 /* ViewController.swift */,
-				3F810B2F2264139700165D41 /* MyTabBarController.swift */,
-				3F810B31226414F800165D41 /* MyNavigationController.swift */,
-				3F810B2122640FAE00165D41 /* Main.storyboard */,
+				3F810C492264931800165D41 /* Classes */,
+				3F810B2922640FB100165D41 /* Info.plist */,
 				3F810B2422640FB100165D41 /* Assets.xcassets */,
 				3F810B2622640FB100165D41 /* LaunchScreen.storyboard */,
-				3F810B2922640FB100165D41 /* Info.plist */,
-				3F810B332264177700165D41 /* HomeViewController.swift */,
-				3F810B352264178900165D41 /* VideoViewController.swift */,
-				3F810B37226417A900165D41 /* HuoshanViewController.swift */,
-				3F810B3B22641BC300165D41 /* MineViewController.swift */,
-				3F810B3D2264228F00165D41 /* MyTabBar.swift */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		3F810C492264931800165D41 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C4A2264931800165D41 /* Home */,
+				3F810C4F2264931800165D41 /* Huoshan */,
+				3F810C542264931800165D41 /* Main */,
+				3F810C5B2264931800165D41 /* Mine */,
+				3F810C602264931800165D41 /* Others */,
+				3F810C622264931800165D41 /* Video */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3F810C4A2264931800165D41 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C4B2264931800165D41 /* Controller */,
+				3F810C4D2264931800165D41 /* Model */,
+				3F810C4E2264931800165D41 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3F810C4B2264931800165D41 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C4C2264931800165D41 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F810C4D2264931800165D41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F810C4E2264931800165D41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F810C4F2264931800165D41 /* Huoshan */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C502264931800165D41 /* Controller */,
+				3F810C522264931800165D41 /* Model */,
+				3F810C532264931800165D41 /* View */,
+			);
+			path = Huoshan;
+			sourceTree = "<group>";
+		};
+		3F810C502264931800165D41 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C512264931800165D41 /* HuoshanViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F810C522264931800165D41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F810C532264931800165D41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F810C542264931800165D41 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C552264931800165D41 /* Controller */,
+				3F810C582264931800165D41 /* Model */,
+				3F810C592264931800165D41 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3F810C552264931800165D41 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C562264931800165D41 /* MyNavigationController.swift */,
+				3F810C572264931800165D41 /* MyTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F810C582264931800165D41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F810C592264931800165D41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C5A2264931800165D41 /* MyTabBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F810C5B2264931800165D41 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C5C2264931800165D41 /* Controller */,
+				3F810C5E2264931800165D41 /* Model */,
+				3F810C5F2264931800165D41 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		3F810C5C2264931800165D41 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C5D2264931800165D41 /* MineViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F810C5E2264931800165D41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F810C5F2264931800165D41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F810C602264931800165D41 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C612264931800165D41 /* AppDelegate.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		3F810C622264931800165D41 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C632264931800165D41 /* Controller */,
+				3F810C652264931800165D41 /* Model */,
+				3F810C662264931800165D41 /* View */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		3F810C632264931800165D41 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C642264931800165D41 /* VideoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F810C652264931800165D41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F810C662264931800165D41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6F24B5CD38143ED0C76770CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5ADCD5596EC3B1F4E90E0A3 /* Pods-News.debug.xcconfig */,
+				CEE3D0B1F85E37C537B1627B /* Pods-News.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +286,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F810B2C22640FB100165D41 /* Build configuration list for PBXNativeTarget "News" */;
 			buildPhases = (
+				353AC9B0AB215D9831FE4044 /* [CP] Check Pods Manifest.lock */,
 				3F810B1622640FAE00165D41 /* Sources */,
 				3F810B1722640FAE00165D41 /* Frameworks */,
 				3F810B1822640FAE00165D41 /* Resources */,
@@ -145,40 +340,55 @@
 			files = (
 				3F810B2822640FB100165D41 /* LaunchScreen.storyboard in Resources */,
 				3F810B2522640FB100165D41 /* Assets.xcassets in Resources */,
-				3F810B2322640FAE00165D41 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		353AC9B0AB215D9831FE4044 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-News-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F810B1622640FAE00165D41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F810B342264177700165D41 /* HomeViewController.swift in Sources */,
-				3F810B2022640FAE00165D41 /* ViewController.swift in Sources */,
-				3F810B362264178900165D41 /* VideoViewController.swift in Sources */,
-				3F810B3C22641BC300165D41 /* MineViewController.swift in Sources */,
-				3F810B38226417A900165D41 /* HuoshanViewController.swift in Sources */,
-				3F810B3E2264228F00165D41 /* MyTabBar.swift in Sources */,
-				3F810B32226414F800165D41 /* MyNavigationController.swift in Sources */,
-				3F810B1E22640FAE00165D41 /* AppDelegate.swift in Sources */,
-				3F810B302264139700165D41 /* MyTabBarController.swift in Sources */,
+				3F810C692264931800165D41 /* MyNavigationController.swift in Sources */,
+				3F810C6A2264931800165D41 /* MyTabBarController.swift in Sources */,
+				3F810C6E2264931800165D41 /* VideoViewController.swift in Sources */,
+				3F810C672264931800165D41 /* HomeViewController.swift in Sources */,
+				3F810C6B2264931800165D41 /* MyTabBar.swift in Sources */,
+				3F810C6D2264931800165D41 /* AppDelegate.swift in Sources */,
+				3F810C682264931800165D41 /* HuoshanViewController.swift in Sources */,
+				3F810C6C2264931800165D41 /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3F810B2122640FAE00165D41 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F810B2222640FAE00165D41 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F810B2622640FB100165D41 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -308,6 +518,7 @@
 		};
 		3F810B2D22640FB100165D41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5ADCD5596EC3B1F4E90E0A3 /* Pods-News.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -326,6 +537,7 @@
 		};
 		3F810B2E22640FB100165D41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEE3D0B1F85E37C537B1627B /* Pods-News.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F006107226602F00033B010 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F006106226602F00033B010 /* Constant.swift */; };
+		3F00610A226605610033B010 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F006109226605610033B010 /* UIColorExtension.swift */; };
 		3F810B2522640FB100165D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F810B2422640FB100165D41 /* Assets.xcassets */; };
 		3F810B2822640FB100165D41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F810B2622640FB100165D41 /* LaunchScreen.storyboard */; };
 		3F810C672264931800165D41 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C4C2264931800165D41 /* HomeViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		19101F1CFCA44C99A7F957AD /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F006106226602F00033B010 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		3F006109226605610033B010 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		3F810B1A22640FAE00165D41 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F810B2422640FB100165D41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F810B2722640FB100165D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +60,14 @@
 				19101F1CFCA44C99A7F957AD /* Pods_News.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F0061082266052E0033B010 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3F006109226605610033B010 /* UIColorExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		3F810B1122640FAE00165D41 = {
@@ -167,6 +179,7 @@
 		3F810C542264931800165D41 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3F0061082266052E0033B010 /* Extension */,
 				3F810C552264931800165D41 /* Controller */,
 				3F810C582264931800165D41 /* Model */,
 				3F810C592264931800165D41 /* View */,
@@ -234,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				3F810C612264931800165D41 /* AppDelegate.swift */,
+				3F006106226602F00033B010 /* Constant.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -377,10 +391,12 @@
 			files = (
 				3F810C692264931800165D41 /* MyNavigationController.swift in Sources */,
 				3F810C6A2264931800165D41 /* MyTabBarController.swift in Sources */,
+				3F006107226602F00033B010 /* Constant.swift in Sources */,
 				3F810C6E2264931800165D41 /* VideoViewController.swift in Sources */,
 				3F810C672264931800165D41 /* HomeViewController.swift in Sources */,
 				3F810C6B2264931800165D41 /* MyTabBar.swift in Sources */,
 				3F810C6D2264931800165D41 /* AppDelegate.swift in Sources */,
+				3F00610A226605610033B010 /* UIColorExtension.swift in Sources */,
 				3F810C682264931800165D41 /* HuoshanViewController.swift in Sources */,
 				3F810C6C2264931800165D41 /* MineViewController.swift in Sources */,
 			);

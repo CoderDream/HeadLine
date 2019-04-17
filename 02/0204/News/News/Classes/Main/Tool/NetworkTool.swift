@@ -13,7 +13,7 @@ import SwiftyJSON
 protocol NetworkToolProtocol {
     // ---------------------------- 我的 mine ----------------------------------
     // 我的界面 cell 的数据
-    static func loadMyCellData()
+    static func loadMyCellData(completionHandler: @escaping (_ sections: [[MyCellModel]]) -> ())
     // 我的关注数据
     static func loadMyConcern()
 }
@@ -21,16 +21,36 @@ protocol NetworkToolProtocol {
 extension NetworkToolProtocol {
     // ---------------------------- 我的 mine ----------------------------------
     // 我的界面 cell 的数据
-    static func loadMyCellData() {
+    static func loadMyCellData(completionHandler: @escaping (_ sections: [[MyCellModel]]) -> ()) {
         let url = BASE_URL + "/user/tab/tabs/?"
         let params = ["device_id": device_id]
         Alamofire.request(url, method: .get, parameters: params).responseJSON{ (response) in
             guard response.result.isSuccess else {
-                
-              return
+                // 网络错误的提示信息
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"] == "success" else {
+                    return
+                }
+                if let data = json["data"].dictionary {
+                    print(data)
+                    if let sections = data["sections"]?.array {
+                        var sectionArray = [[MyCellModel]]()
+                        for item in sections {
+                            var rows = [MyCellModel]()
+                            for row in item.arrayObject! {
+                                let myCellModel = MyCellModel.deserialize(from: row as? NSDictionary)
+                                rows.append(myCellModel!)
+                            }
+                            sectionArray.append(rows)
+                        }
+                        completionHandler(sectionArray)
+                    }
+                }
             }
         }
-        
     }
     // 我的关注数据
     static func loadMyConcern() {

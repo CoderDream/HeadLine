@@ -20,6 +20,7 @@
 		3F810C6C2264931800165D41 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C5D2264931800165D41 /* MineViewController.swift */; };
 		3F810C6D2264931800165D41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C612264931800165D41 /* AppDelegate.swift */; };
 		3F810C6E2264931800165D41 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C642264931800165D41 /* VideoViewController.swift */; };
+		3F810C732266AF3100165D41 /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C722266AF3100165D41 /* MyCellModel.swift */; };
 		CD3791129F22E0E7463EA136 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19101F1CFCA44C99A7F957AD /* Pods_News.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		3F810C5D2264931800165D41 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		3F810C612264931800165D41 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F810C642264931800165D41 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		3F810C722266AF3100165D41 /* MyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
 		C5ADCD5596EC3B1F4E90E0A3 /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE3D0B1F85E37C537B1627B /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,10 +191,10 @@
 		3F810C542264931800165D41 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3F810C712266AF1D00165D41 /* Model */,
 				3F00610B226609F80033B010 /* Tool */,
 				3F0061082266052E0033B010 /* Extension */,
 				3F810C552264931800165D41 /* Controller */,
-				3F810C582264931800165D41 /* Model */,
 				3F810C592264931800165D41 /* View */,
 			);
 			path = Main;
@@ -207,13 +209,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		3F810C582264931800165D41 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		3F810C592264931800165D41 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,8 +220,8 @@
 		3F810C5B2264931800165D41 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				3F810C742266B0FB00165D41 /* Model */,
 				3F810C5C2264931800165D41 /* Controller */,
-				3F810C5E2264931800165D41 /* Model */,
 				3F810C5F2264931800165D41 /* View */,
 			);
 			path = Mine;
@@ -238,13 +233,6 @@
 				3F810C5D2264931800165D41 /* MineViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		3F810C5E2264931800165D41 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		3F810C5F2264931800165D41 /* View */ = {
@@ -293,6 +281,21 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3F810C712266AF1D00165D41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F810C742266B0FB00165D41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F810C722266AF3100165D41 /* MyCellModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		6F24B5CD38143ED0C76770CE /* Pods */ = {
@@ -434,6 +437,7 @@
 				3F810C6E2264931800165D41 /* VideoViewController.swift in Sources */,
 				3F810C672264931800165D41 /* HomeViewController.swift in Sources */,
 				3F810C6B2264931800165D41 /* MyTabBar.swift in Sources */,
+				3F810C732266AF3100165D41 /* MyCellModel.swift in Sources */,
 				3F810C6D2264931800165D41 /* AppDelegate.swift in Sources */,
 				3F00610A226605610033B010 /* UIColorExtension.swift in Sources */,
 				3F810C682264931800165D41 /* HuoshanViewController.swift in Sources */,

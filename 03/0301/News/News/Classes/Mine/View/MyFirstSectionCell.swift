@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyFirstSectionCell: UITableViewCell {
+class MyFirstSectionCell: UITableViewCell, RegisterCellOrNib {
     /// 标题
     @IBOutlet weak var leftLabel: UILabel!
     /// 副标题

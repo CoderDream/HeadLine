@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol RigisterCellOrNib {
+protocol RegisterCellOrNib {
     
 }
 
-extension RigisterCellOrNib {
+extension RegisterCellOrNib {
     static var identifier: String {
         return "\(self)"
     }

@@ -19,8 +19,10 @@ class MineViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = UIColor.globalBackgroundColor()
         // 使用注册方式的 TableCell
-        tableView.register(UINib(nibName: String(describing: MyFirstSectionCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MyFirstSectionCell.self))
-        tableView.register(UINib(nibName: String(describing: MyOtherCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MyOtherCell.self))
+        //tableView.register(UINib(nibName: String(describing: MyFirstSectionCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MyFirstSectionCell.self))
+        //tableView.register(UINib(nibName: String(describing: MyOtherCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MyOtherCell.self))
+        tableView.ymRegisterCell(cell: MyFirstSectionCell.self)
+        tableView.ymRegisterCell(cell: MyOtherCell.self)
         // 
         NetworkTool.loadMyCellData { (sections) in
             let string = "{\"text\":\"我的关注\",\"grey_text\":\"\"}"
@@ -60,14 +62,16 @@ extension MineViewController {
     // cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 && indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MyFirstSectionCell.self)) as! MyFirstSectionCell
+            //let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MyFirstSectionCell.self)) as! MyFirstSectionCell
+            let cell = tableView.ymDequeueReusableCell(indexPath: indexPath) as MyFirstSectionCell
             let section = sections[indexPath.section]
             let myCellModel = section[indexPath.row]
             cell.leftLabel.text = myCellModel.text
             cell.rightLabel.text = myCellModel.grey_text
             return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MyOtherCell.self)) as! MyOtherCell
+        //let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MyOtherCell.self)) as! MyOtherCell
+        let cell = tableView.ymDequeueReusableCell(indexPath: indexPath) as MyOtherCell
         let section = sections[indexPath.section]
         let myCellModel = section[indexPath.row]
         cell.leftLabel.text = myCellModel.text

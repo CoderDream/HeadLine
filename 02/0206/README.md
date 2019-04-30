@@ -14,14 +14,14 @@
 
 - 使用自定义 Cell  
 	1. viewDidLoad  
-	```
+	```swift
 	 // 注册自定义 Cell
 	tableView.register(UINib(nibName: String(describing: MyOtherCell.self), bundle: nil), 
 	forCellReuseIdentifier: String(describing: MyOtherCell.self))
 	```
 	
 	2. tableView(:cellForRowAt)  
-	```
+	```swift
 	let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MyOtherCell.self)) as! MyOtherCell
 	```
 
@@ -44,17 +44,16 @@
 - 把右边Label的字体颜色设置为“Light Gray Color”  
 ![](https://github.com/CoderDream/HeadLine/blob/master/02/0206/Snapshot/snap_02060206.png)  
 
-- 设置自定义属性的label值
-
-tableView(:cellForRowAt)  
-```
+- 设置自定义属性的label值  
+tableView(:cellForRowAt)    
+```swift
 // 自定义属性
 cell.leftLabel?.text = myCellModel.text
 cell.rightLabel?.text = myCellModel.grey_text
 ```
 
 - 设置每行高度
-```
+```swift
  // 设置高度
 override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     // 固定高度

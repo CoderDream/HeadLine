@@ -34,30 +34,48 @@ class MineViewController: UITableViewController {
 }
 
 extension MineViewController {
+    // 每组头部的高度
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
-    
+    // 每组头部视图
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 10))
         view.backgroundColor = UIColor.globalBackgroundColor()
         return view
     }
-    
+    // 组数
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
-    
+    // 每组的行数
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].count
     }
-    
+    // Cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MyOtherCell.self)) as! MyOtherCell
         let section = sections[indexPath.section]
         let myCellModel = section[indexPath.row]
-        cell.textLabel?.text = myCellModel.text
+        //cell.textLabel?.text = myCellModel.text
+        // 自定义属性
+        cell.leftLabel?.text = myCellModel.text
+        cell.rightLabel?.text = myCellModel.grey_text
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print("didSelectRowAt: \(indexPath)")
+    }
+    // 设置高度 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // 固定高度
+        if indexPath.section == 0 {
+            return 100
+        } else {
+            return UITableView.automaticDimension + 50
+        }
     }
 }

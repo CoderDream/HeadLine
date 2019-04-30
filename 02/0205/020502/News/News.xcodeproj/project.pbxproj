@@ -224,9 +224,9 @@
 		3F810C5B2264931800165D41 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				3FFF20DD2277DE7A0054F12B /* View */,
 				3F810C742266B0FB00165D41 /* Model */,
 				3F810C5C2264931800165D41 /* Controller */,
+				3FFF20DD2277DE7A0054F12B /* View */,
 			);
 			path = Mine;
 			sourceTree = "<group>";

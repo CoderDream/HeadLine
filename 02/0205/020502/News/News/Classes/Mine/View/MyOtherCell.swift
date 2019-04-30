@@ -9,6 +9,12 @@
 import UIKit
 
 class MyOtherCell: UITableViewCell {
+    /// 标题
+    @IBOutlet weak var leftLabel: UILabel!
+    /// 副标题
+    @IBOutlet weak var rightLabel: UILabel!
+    /// 右边箭头
+    @IBOutlet weak var rightImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

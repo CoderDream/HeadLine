@@ -44,6 +44,9 @@
 - 把右边Label的字体颜色设置为“Light Gray Color”  
 ![](https://github.com/CoderDream/HeadLine/blob/master/02/0206/Snapshot/snap_02060206.png)  
 
+- 自定义 Cell 的详情    
+![](https://github.com/CoderDream/HeadLine/blob/master/02/0206/Snapshot/snap_02060207.png) 
+
 - 设置自定义属性的label值  
 tableView(:cellForRowAt)    
 ```swift
@@ -64,3 +67,6 @@ override func tableView(_ tableView: UITableView, heightForRowAt indexPath: Inde
     }
 }
 ```
+
+- 真机运行结果  
+![](https://github.com/CoderDream/HeadLine/blob/master/02/0206/Snapshot/snap_02060208.png) 

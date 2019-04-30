@@ -69,4 +69,4 @@ override func tableView(_ tableView: UITableView, heightForRowAt indexPath: Inde
 ```
 
 - 真机运行结果  
-![](https://github.com/CoderDream/HeadLine/blob/master/02/0206/Snapshot/snap_02060208.png) 
+![](https://github.com/CoderDream/HeadLine/blob/master/02/0206/Snapshot/snap_02060209.png) 

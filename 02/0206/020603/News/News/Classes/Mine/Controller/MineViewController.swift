@@ -18,6 +18,8 @@ class MineViewController: UITableViewController {
         // Do any additional setup after loading the view.
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = UIColor.globalBackgroundColor()
+        // 去掉系统默认的分割线
+        tableView.separatorStyle = .none
         // 注册自定义 Cell
         tableView.register(UINib(nibName: String(describing: MyOtherCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MyOtherCell.self))
         // 

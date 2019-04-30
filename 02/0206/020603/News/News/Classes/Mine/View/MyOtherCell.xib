@@ -38,13 +38,23 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq9-G8-Cj3" userLabel="分割线">
+                        <rect key="frame" x="15" y="43" width="305" height="0.5"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="Q5q-7k-txC"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="JVN-wi-anw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0J8-ym-OLq"/>
+                    <constraint firstAttribute="trailing" secondItem="cq9-G8-Cj3" secondAttribute="trailing" id="2AE-W5-hUd"/>
                     <constraint firstItem="QCp-NS-Lus" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4SI-bD-m73"/>
+                    <constraint firstAttribute="bottom" secondItem="cq9-G8-Cj3" secondAttribute="bottom" id="B1S-TC-Urk"/>
                     <constraint firstItem="QCp-NS-Lus" firstAttribute="leading" secondItem="MZY-rq-JE4" secondAttribute="trailing" constant="10" id="FPz-S0-sjb"/>
                     <constraint firstItem="MZY-rq-JE4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HVb-aV-f6q"/>
                     <constraint firstItem="JVN-wi-anw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="T4O-oq-WfR"/>
+                    <constraint firstItem="cq9-G8-Cj3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ZSC-Uj-lzM"/>
                     <constraint firstAttribute="trailing" secondItem="QCp-NS-Lus" secondAttribute="trailing" constant="15" id="ejq-sz-NHW"/>
                     <constraint firstAttribute="bottom" secondItem="MZY-rq-JE4" secondAttribute="bottom" id="lTc-lA-2mO"/>
                     <constraint firstAttribute="bottom" secondItem="JVN-wi-anw" secondAttribute="bottom" id="mrs-cj-68y"/>
@@ -56,7 +66,7 @@
                 <outlet property="rightImageView" destination="QCp-NS-Lus" id="GqE-hW-OTG"/>
                 <outlet property="rightLabel" destination="MZY-rq-JE4" id="SiG-ES-gqq"/>
             </connections>
-            <point key="canvasLocation" x="-158.40000000000001" y="138.53073463268368"/>
+            <point key="canvasLocation" x="-147.19999999999999" y="138.53073463268368"/>
         </tableViewCell>
     </objects>
     <resources>

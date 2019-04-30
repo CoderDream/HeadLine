@@ -38,7 +38,8 @@ class MineViewController: UITableViewController {
 extension MineViewController {
     // 每组头部的高度
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        //return 10
+        return section == 1 ? 0 : 10
     }
     // 每组头部视图
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -74,10 +75,16 @@ extension MineViewController {
     // 设置高度
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // 固定高度
-        if indexPath.section == 0 {
-            return 100
-        } else {
-            return UITableView.automaticDimension + 50
-        }
+//        if indexPath.section == 0 {
+//            return 100
+//        } else {
+//            return UITableView.automaticDimension + 50
+//        }
+        //if indexPath.section > 0 {
+        //    return UITableView.automaticDimension + 50
+        //}
+        
+        return UITableView.automaticDimension + 50
+        
     }
 }

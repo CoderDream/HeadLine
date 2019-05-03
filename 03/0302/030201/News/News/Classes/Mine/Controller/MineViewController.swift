@@ -79,10 +79,20 @@ extension MineViewController {
             let cell = tableView.ymDequeueReusableCell(indexPath: indexPath) as MyFirstSectionCell
             
             let section = sections[indexPath.section]
-            let myCellModel = section[indexPath.row]
+            cell.myCellModel = section[indexPath.row]
+            //let myCellModel = section[indexPath.row]
             // 自定义属性
-            cell.leftLabel?.text = myCellModel.text
-            cell.rightLabel?.text = myCellModel.grey_text
+            //cell.leftLabel?.text = myCellModel.text
+            //cell.rightLabel?.text = myCellModel.grey_text
+            if concerns.count == 0 || concerns.count == 1 {
+                cell.collectionView.isHidden = true
+            }
+            if concerns.count == 1 {
+                cell.myConcern = concerns[0]
+            }
+            if concerns.count > 1 {
+                cell.myConcerns = concerns
+            }
             return cell
         }
         

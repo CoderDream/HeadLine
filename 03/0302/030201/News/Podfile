@@ -9,4 +9,5 @@ target 'News' do
   pod 'Alamofire' #, '~> 4.8.1'
   pod 'SwiftyJSON' #, '~> 4.2.0'
   pod 'HandyJSON' #, '~> 4.2.1'
+  pod 'Kingfisher'
 end

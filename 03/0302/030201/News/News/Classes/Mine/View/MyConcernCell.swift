@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Kingfisher
 
-class MyConcernCell: UITableViewCell, RegisterCellOrNib {
+class MyConcernCell: UICollectionViewCell, RegisterCellOrNib {
     /// 头像
     @IBOutlet weak var avatarImageView: UIImageView!
     /// vip
@@ -16,7 +17,7 @@ class MyConcernCell: UITableViewCell, RegisterCellOrNib {
     /// 用户名
     @IBOutlet weak var nameLabel: UILabel!
     /// 新通知
-    @IBOutlet weak var tipsButton: UIButton!
+    //@IBOutlet weak var tipsButton: UIButton!
     var myConcern: MyConcern? {
         didSet {
             avatarImageView.kf.setImage(with: URL(string: (myConcern?.icon)!))
@@ -25,15 +26,15 @@ class MyConcernCell: UITableViewCell, RegisterCellOrNib {
                 vipImageView.isHidden = !isVerify
             }
             if let tips = myConcern?.tips {
-                tipsButton.isHidden = !tips
+                //tipsButton.isHidden = !tips
             }
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        tipsButton.layer.borderWidth = 1
-        tipsButton.layer.borderColor = UIColor.white.cgColor
+        //tipsButton.layer.borderWidth = 1
+        //tipsButton.layer.borderColor = UIColor.white.cgColor
     }
     
 }

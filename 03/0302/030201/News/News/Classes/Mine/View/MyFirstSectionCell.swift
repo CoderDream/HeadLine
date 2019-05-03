@@ -41,8 +41,6 @@ class MyFirstSectionCell: UITableViewCell, RegisterCellOrNib {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
         collectionView.collectionViewLayout = MyConcernFlowLayout()
         collectionView.delegate = self
         collectionView.dataSource = self

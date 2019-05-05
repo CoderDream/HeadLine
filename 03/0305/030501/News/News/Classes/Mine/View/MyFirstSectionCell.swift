@@ -16,9 +16,12 @@ class MyFirstSectionCell: UITableViewCell, RegisterCellOrNib {
     @IBOutlet weak var rightLabel: UILabel!
     /// 右边箭头
     @IBOutlet weak var rightImageView: UIImageView!
-
+    // 集合视图
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    /// 顶部视图
+    @IBOutlet weak var topView: UIView!
+    /// 分割线
+    @IBOutlet weak var separatorView: UIView!
     /// 我关注的用户
     var myConcerns = [MyConcern]() {
         didSet {
@@ -45,6 +48,14 @@ class MyFirstSectionCell: UITableViewCell, RegisterCellOrNib {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView?.ymRegisterCell(cell: MyConcernCell.self)
+        // 设置主题
+        leftLabel.theme_textColor = "colors.black"
+        rightLabel.theme_textColor = "colors.cellRightTextColor"
+        rightImageView.theme_image = "images.cellRightArrow"
+        separatorView.theme_backgroundColor = "colors.separatorViewColor"
+        theme_backgroundColor = "colors.cellBackgroundColor"
+        topView.theme_backgroundColor = "colors.separatorViewColor"
+        collectionView.theme_backgroundColor = "colors.separatorViewColor"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

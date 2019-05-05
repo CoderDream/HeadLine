@@ -18,3 +18,5 @@ let device_id: String = "6096495334"
 let IID: String = "5034850950"
 
 let kMyHeaderViewHeight: CGFloat = 280
+
+let isNight = "isNight"

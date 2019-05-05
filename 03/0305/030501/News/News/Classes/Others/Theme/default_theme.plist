@@ -23,6 +23,8 @@
 	</dict>
 	<key>colors</key>
 	<dict>
+		<key>separatorViewColor</key>
+		<string>#f0f0f0</string>
 		<key>cellRightTextColor</key>
 		<string>#aaaaaa</string>
 		<key>cellBackgroundColor</key>

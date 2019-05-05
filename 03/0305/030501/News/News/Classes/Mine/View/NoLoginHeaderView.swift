@@ -42,7 +42,8 @@ class NoLoginHeaderView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        ThemeManager.setTheme(plistName: "default_theme", path: .mainBundle)
+        //ThemeManager.setTheme(plistName: "default_theme", path: .mainBundle)
+        dayOrNightButton.isSelected = UserDefaults.standard.bool(forKey: isNight)
         
         let effectX = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
         effectX.maximumRelativeValue = 20
@@ -69,7 +70,8 @@ class NoLoginHeaderView: UIView {
     /// 点击夜间按钮
     @IBAction func dayOrNightButtonClicked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        
+        // 保存用户的主题
+        UserDefaults.standard.set(sender.isSelected, forKey: isNight)
         MyTheme.switchNight(isToNight: sender.isSelected)
     }
 }

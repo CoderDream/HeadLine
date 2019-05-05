@@ -36,6 +36,9 @@ class MyConcernCell: UICollectionViewCell, RegisterCellOrNib {
         super.awakeFromNib()
         tipsButton.layer.borderWidth = 1
         tipsButton.layer.borderColor = UIColor.white.cgColor
+        
+        theme_backgroundColor = "colors.cellBackgroundColor"
+        nameLabel.theme_textColor = "colors.black"
     }
 
 }

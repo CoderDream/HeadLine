@@ -15,10 +15,17 @@ class MyOtherCell: UITableViewCell, RegisterCellOrNib {
     @IBOutlet weak var rightLabel: UILabel!
     /// 右边箭头
     @IBOutlet weak var rightImageView: UIImageView!
-
+    /// 分割线
+    @IBOutlet weak var separatorView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        leftLabel.theme_textColor = "colors.black"
+        rightLabel.theme_textColor = "colors.cellRightTextColor"
+        rightImageView.theme_image = "images.cellRightArrow"
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

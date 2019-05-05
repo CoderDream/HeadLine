@@ -39,6 +39,9 @@
                             <state key="normal" title="夜间" image="nighticon_profile_24x24_">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="dayOrNightButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="S8S-1m-ZZ5"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VS5-iH-MuS">
                             <rect key="frame" x="138" y="0.0" width="138" height="70"/>
@@ -128,6 +131,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="bgImageView" destination="7Gs-fc-lxg" id="FrQ-zp-OAu"/>
+                <outlet property="bottomView" destination="LpT-Ub-Jn1" id="Pfe-ba-f4b"/>
                 <outlet property="dayOrNightButton" destination="MmJ-eW-CRB" id="m8W-iK-iT4"/>
                 <outlet property="favoriteButton" destination="4KD-SR-h4u" id="oei-M9-T3T"/>
                 <outlet property="historyButton" destination="VS5-iH-MuS" id="peZ-Ed-0Xc"/>

@@ -33,6 +33,8 @@
 		3FFF20E422781EB90054F12B /* MyFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF20E222781EB90054F12B /* MyFirstSectionCell.swift */; };
 		3FFF20E522781EB90054F12B /* MyFirstSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF20E322781EB90054F12B /* MyFirstSectionCell.xib */; };
 		3FFF20E722783DA50054F12B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF20E622783DA50054F12B /* UIViewExtension.swift */; };
+		3FFF2112227ED4AA0054F12B /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF2111227ED4AA0054F12B /* default_theme.plist */; };
+		3FFF2114227ED4DB0054F12B /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF2113227ED4DB0054F12B /* night_theme.plist */; };
 		CD3791129F22E0E7463EA136 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19101F1CFCA44C99A7F957AD /* Pods_News.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +52,6 @@
 		3F810B1A22640FAE00165D41 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F810B2422640FB100165D41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F810B2722640FB100165D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3F810B2922640FB100165D41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F810C4C2264931800165D41 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3F810C512264931800165D41 /* HuoshanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuoshanViewController.swift; sourceTree = "<group>"; };
 		3F810C562264931800165D41 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
@@ -66,6 +67,9 @@
 		3FFF20E222781EB90054F12B /* MyFirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstSectionCell.swift; sourceTree = "<group>"; };
 		3FFF20E322781EB90054F12B /* MyFirstSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFirstSectionCell.xib; sourceTree = "<group>"; };
 		3FFF20E622783DA50054F12B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		3FFF2111227ED4AA0054F12B /* default_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
+		3FFF2113227ED4DB0054F12B /* night_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
+		3FFF2115227EDD300054F12B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5ADCD5596EC3B1F4E90E0A3 /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE3D0B1F85E37C537B1627B /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,9 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				3F810C492264931800165D41 /* Classes */,
-				3F810B2922640FB100165D41 /* Info.plist */,
 				3F810B2422640FB100165D41 /* Assets.xcassets */,
 				3F810B2622640FB100165D41 /* LaunchScreen.storyboard */,
+				3FFF2115227EDD300054F12B /* Info.plist */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -266,6 +270,7 @@
 		3F810C602264931800165D41 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				3FFF210F227ED1E60054F12B /* Theme */,
 				3F810C612264931800165D41 /* AppDelegate.swift */,
 				3F006106226602F00033B010 /* Constant.swift */,
 			);
@@ -332,6 +337,15 @@
 				3F077F7E227C284B009C47B5 /* NoLoginHeaderView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3FFF210F227ED1E60054F12B /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF2111227ED4AA0054F12B /* default_theme.plist */,
+				3FFF2113227ED4DB0054F12B /* night_theme.plist */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		6F24B5CD38143ED0C76770CE /* Pods */ = {
@@ -407,7 +421,9 @@
 				3F077F7B227BFF8A009C47B5 /* MyConcernCell.xib in Resources */,
 				3F077F7F227C284B009C47B5 /* NoLoginHeaderView.xib in Resources */,
 				3FFF20E12277DF130054F12B /* MyOtherCell.xib in Resources */,
+				3FFF2112227ED4AA0054F12B /* default_theme.plist in Resources */,
 				3FFF20E522781EB90054F12B /* MyFirstSectionCell.xib in Resources */,
+				3FFF2114227ED4DB0054F12B /* night_theme.plist in Resources */,
 				3F810B2522640FB100165D41 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,7 +652,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GP5VW643M;
-				INFOPLIST_FILE = News/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/News/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -655,7 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GP5VW643M;
-				INFOPLIST_FILE = News/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/News/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

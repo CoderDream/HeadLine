@@ -154,3 +154,9 @@ Corner Radius: 14
 
 
 Stack View
+
+
+
+Showing All Messages
+Build system information
+error: SWIFT_VERSION '5.0' is unsupported, supported versions are: 3.0, 4.0, 4.2. (in target 'SwiftyJSON')

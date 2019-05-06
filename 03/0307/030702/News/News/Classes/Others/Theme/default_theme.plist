@@ -4,6 +4,10 @@
 <dict>
 	<key>images</key>
 	<dict>
+		<key>publishButtonBackgroundImage</key>
+		<string>feed_publish_44x44_</string>
+		<key>publishButtonBackgroundSelectedImage</key>
+		<string>feed_publish_press_44x44_</string>
 		<key>cellRightArrow</key>
 		<string>setting_rightarrow_8x14_</string>
 		<key>loginSinaButton</key>
@@ -23,6 +27,8 @@
 	</dict>
 	<key>colors</key>
 	<dict>
+		<key>tabbarTintColor</key>
+		<string>#f55a5d</string>
 		<key>separatorViewColor</key>
 		<string>#f0f0f0</string>
 		<key>cellRightTextColor</key>

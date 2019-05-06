@@ -1,15 +1,14 @@
 //
-//  MoreLoginViewController.swift
+//  MyNavigationController.swift
 //  News
 //
-//  Created by CoderDream on 2019/5/6.
+//  Created by CoderDream on 2019/4/15.
 //  Copyright © 2019 CoderDream. All rights reserved.
 //
 
 import UIKit
-import IBAnimatable
 
-class MoreLoginViewController: AnimatableModalViewController {
+class MyNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,11 +16,7 @@ class MoreLoginViewController: AnimatableModalViewController {
         // Do any additional setup after loading the view.
     }
     
-    /// 关闭按钮点击
-    @IBAction func moreLoginCloseButtonClicked(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
-    
+
     /*
     // MARK: - Navigation
 

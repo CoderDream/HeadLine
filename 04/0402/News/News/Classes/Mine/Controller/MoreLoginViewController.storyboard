@@ -265,20 +265,25 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="emailLoginButton" destination="jHw-e8-xpb" id="A6g-C9-iGO"/>
                         <outlet property="enterTouTiaoButton" destination="sQm-JF-ars" id="7bb-xH-sC4"/>
                         <outlet property="findPasswordButton" destination="Av1-g1-3KG" id="Gq8-Lh-oAb"/>
                         <outlet property="findPasswordView" destination="4P5-HK-NGP" id="jYc-dh-0UJ"/>
+                        <outlet property="loginCloseButton" destination="kbJ-hh-t3H" id="z6Y-XG-zfB"/>
                         <outlet property="loginModeButton" destination="Au5-Nt-MNg" id="WpC-Ug-EhL"/>
                         <outlet property="middleTipLabel" destination="cvW-my-AC8" id="BDu-7X-fEP"/>
                         <outlet property="mobileTextField" destination="NqB-qu-Owa" id="KNr-u5-400"/>
                         <outlet property="mobileView" destination="zvr-dz-OrQ" id="bvN-5G-kMf"/>
                         <outlet property="passwordTextField" destination="7aL-Bj-Zk4" id="o5J-ao-aFs"/>
                         <outlet property="passwordView" destination="ImF-ln-nn0" id="f3r-Cv-DTZ"/>
+                        <outlet property="qqLoginButton" destination="rqY-LK-uXQ" id="2A9-ct-KZq"/>
                         <outlet property="readButton" destination="5Gd-0c-KHk" id="Tye-sP-dLM"/>
                         <outlet property="readLabel" destination="8Cq-1F-erU" id="xCx-Nw-cUo"/>
                         <outlet property="sendVerifyButton" destination="1O5-yv-dg0" id="ecq-bM-frx"/>
                         <outlet property="sendVerifyView" destination="7gv-92-sNg" id="Bo7-yD-3ad"/>
+                        <outlet property="tianyiLoginButton" destination="OBd-PF-uRV" id="6R5-hv-yQk"/>
                         <outlet property="topLabel" destination="vvN-Z3-Jv3" id="Jzs-Ge-0MT"/>
+                        <outlet property="wechatLoginButton" destination="07g-B4-6tx" id="QyA-d8-0S0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJ2-DC-TYF" userLabel="First Responder" sceneMemberID="firstResponder"/>

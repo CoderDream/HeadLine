@@ -10,6 +10,8 @@ import UIKit
 import IBAnimatable
 
 class MoreLoginViewController: AnimatableModalViewController {
+    /// 登录页面关闭按钮
+    @IBOutlet weak var loginCloseButton: UIButton!
     /// 顶部标题
     @IBOutlet weak var topLabel: UILabel!
     /// 手机号 View
@@ -38,6 +40,15 @@ class MoreLoginViewController: AnimatableModalViewController {
     @IBOutlet weak var readButton: UIButton!
     /// 账号密码登录
     @IBOutlet weak var loginModeButton: UIButton!
+    /// 微信登录
+    @IBOutlet weak var wechatLoginButton: UIButton!
+    /// 微信登录
+    @IBOutlet weak var qqLoginButton: UIButton!
+    /// 微信登录
+    @IBOutlet weak var tianyiLoginButton: UIButton!
+    /// 微信登录
+    @IBOutlet weak var emailLoginButton: UIButton!
+    
     /// 账号密码登录 点击
     @IBAction func loginModeButtonClicked(_ sender: UIButton) {
         loginModeButton.isSelected = !sender.isSelected
@@ -48,10 +59,26 @@ class MoreLoginViewController: AnimatableModalViewController {
         passwordTextField.placeholder = sender.isSelected ? "密码" : "请输入验证码"
         topLabel.text = sender.isSelected ? "账号密码登录" : "登录你的头条，精彩永不消失"
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loginModeButton.setTitle("免密码登录", for: .selected)
+        view.theme_backgroundColor = "colors.cellBackgroundColor"
+        topLabel.theme_textColor = "colors.black"
+        middleTipLabel.theme_textColor = "colors.cellRightTextColor"
+        readLabel.theme_textColor = "colors.black"
+        enterTouTiaoButton.theme_backgroundColor = "colors.enterTouTiaoBackgroundColor"
+        enterTouTiaoButton.theme_setTitleColor("colors.enterTouTiaoTextColor", forState: .normal)
+        readButton.theme_setImage("images.loginReadButton", forState: .normal)
+        readButton.theme_setImage("images.loginReadButtonSelected", forState: .selected)
+        mobileView.theme_backgroundColor = "colors.loginMobileViewBackgroundColor"
+        passwordView.theme_backgroundColor = "colors.loginMobileViewBackgroundColor"
+        loginCloseButton.theme_setImage("images.loginCloseButton", forState: .normal)
+        wechatLoginButton.theme_setImage("images.moreLoginWechatButton", forState: .normal)
+        qqLoginButton.theme_setImage("images.moreLoginQqButton", forState: .normal)
+        tianyiLoginButton.theme_setImage("images.moreLoginTianyiButton", forState: .normal)
+        emailLoginButton.theme_setImage("images.moreLoginEmailButton", forState: .normal)
     }
     
     @IBAction func moreLoginCloseButtonClicked(_ sender: UIButton) {

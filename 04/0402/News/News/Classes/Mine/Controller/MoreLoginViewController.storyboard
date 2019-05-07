@@ -187,6 +187,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gd-0c-KHk">
                                 <rect key="frame" x="91.666666666666671" y="305.66666666666669" width="15" height="22"/>
                                 <state key="normal" image="details_choose_ok_icon_15x15_"/>
+                                <connections>
+                                    <action selector="readButton:" destination="etS-li-l6A" eventType="touchUpInside" id="t4L-TK-uoO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Au5-Nt-MNg">
                                 <rect key="frame" x="167" y="353.33333333333331" width="80" height="28"/>

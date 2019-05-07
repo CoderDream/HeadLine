@@ -70,8 +70,8 @@ class MoreLoginViewController: AnimatableModalViewController {
         readLabel.theme_textColor = "colors.black"
         enterTouTiaoButton.theme_backgroundColor = "colors.enterTouTiaoBackgroundColor"
         enterTouTiaoButton.theme_setTitleColor("colors.enterTouTiaoTextColor", forState: .normal)
-        readButton.theme_setImage("images.loginReadButton", forState: .normal)
-        readButton.theme_setImage("images.loginReadButtonSelected", forState: .selected)
+        readButton.theme_setImage("images.loginReadButton", forState: .selected)
+        readButton.theme_setImage("images.loginReadButtonSelected", forState: .normal)
         mobileView.theme_backgroundColor = "colors.loginMobileViewBackgroundColor"
         passwordView.theme_backgroundColor = "colors.loginMobileViewBackgroundColor"
         loginCloseButton.theme_setImage("images.loginCloseButton", forState: .normal)
@@ -85,6 +85,9 @@ class MoreLoginViewController: AnimatableModalViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func readButton(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
     /*
     // MARK: - Navigation
 

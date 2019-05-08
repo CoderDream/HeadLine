@@ -42,6 +42,7 @@ class SettingViewController: UITableViewController {
         case 0:
             switch indexPath.row {
             case 0: // 清理缓存
+                print("clicked loadCacheSize")
                 NotificationCenter.default.addObserver(self, selector: #selector(loadCacheSize),
                                                        name: NSNotification.Name(rawValue: "cacheSizeM"), object: nil)
             case 1: // 设置字体
@@ -151,7 +152,6 @@ class SettingViewController: UITableViewController {
 
 
 extension SettingViewController {
-    
     /// 非 WIFI 网络流量
     @objc fileprivate func changePlayNotice(notification: Notification) {
         let userInfo = notification.userInfo as! [String: AnyObject]
@@ -233,16 +233,49 @@ extension SettingViewController {
     
     /// 从沙盒中获取缓存数据大小
     fileprivate func calculateDiskCacheSize() {
+        print("calculateDiskCacheSize")
+        //let cache = KingfisherManager.shared.cache
+//        cache.calculateDiskCacheSize { (size) in
+//            // 转换成 M（兆）
+//            let sizeM = Double(size) / 1024.0 / 1024.0
+//            let sizeString = String(format: "%.0M", sizeM)
+//            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "cacheSizeM"), object: self, userInfo: ["cacheSize": sizeString])
+//        }
+//
+//        cache.calculateDiskCacheSize { (size) in
+//            // 转换成 M
+//            let sizeM = Double(size) / 1024.0 / 1024.0
+//            cell.rightTitleLabel.text = String(format: "%.2fM", sizeM)
+//        }
+        
+//        cache.calculateDiskStorageSize(completion: {(size) in
+//            let sizeM = Double(size ?? 0) / 1024.0 / 1024.0
+//            //cell.rightTitleLabel.text = String(format: "%.2fM", sizeM)
+//            // 转换成 M（兆）
+//            //let sizeM = Double(size) / 1024.0 / 1024.0
+//            let sizeString = String(format: "%.0M", sizeM)
+//            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "cacheSizeM"), object: self, userInfo: ["cacheSize": sizeString])
+//        })
+        
         let cache = KingfisherManager.shared.cache
-        cache.calculateDiskCacheSize { (size) in
-            // 转换成 M（兆）
-            let sizeM = Double(size) / 1024.0 / 1024.0
+        //        cache.calculateDiskCacheSize { (size) in
+        //            // 转换成 M
+        //            let sizeM = Double(size) / 1024.0 / 1024.0
+        //            self.rightTitleLabel.text = String(format: "%.2fM", sizeM)
+        //        }
+        cache.calculateDiskStorageSize(completion: {
+            let temp = $0.value
+            print("value: \(String(describing: temp))")
+            let sizeM = Double($0.value ?? 0) // / 1024.0 / 1024.0
             let sizeString = String(format: "%.0M", sizeM)
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "cacheSizeM"), object: self, userInfo: ["cacheSize": sizeString])
-        }
+            print("sizeString: \(sizeString)")
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "cacheSize"), object: self, userInfo: ["cacheSize": sizeString])
+            //self.rightTitleLabel.text = String(format: "%.2fM", sizeM)
+        })
     }
     /// 获取缓存大小显示到 Cell
     @objc fileprivate func loadCacheSize(notification: Notification) {
+        print("loadCacheSize")
         let userInfo = notification.userInfo as! [String: AnyObject]
         let indexPath = IndexPath(row: 0, section: 0)
         let cell = tableView.cellForRow(at: indexPath) as! SettingCell
@@ -258,7 +291,7 @@ extension SettingViewController {
             cache.clearMemoryCache()
             cache.cleanExpiredDiskCache()
             let sizeString = "0.00M"
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "cacheSizeM"), object: self, userInfo: ["cacheSize": sizeString])
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "cacheSize"), object: self, userInfo: ["cacheSize": sizeString])
             })
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)

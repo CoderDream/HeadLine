@@ -42,7 +42,19 @@ class SettingViewController: UITableViewController {
         case 0:
             switch indexPath.row {
             case 0: // 清理缓存
-                NotificationCenter.default.addObserver(self, selector: #selector(loadCacheSize), name: NSNotification.Name(rawValue: "cacheSizeM"), object: nil)
+                NotificationCenter.default.addObserver(self, selector: #selector(loadCacheSize),
+                                                       name: NSNotification.Name(rawValue: "cacheSizeM"), object: nil)
+            case 1: // 设置字体
+                NotificationCenter.default.addObserver(self, selector: #selector(changeFontSize),
+                                                       name: NSNotification.Name(rawValue: "fontSize"), object: nil)
+            case 2: // 摘要 没有点击效果
+                cell.selectionStyle = .none
+            case 3: // 设置非 WIFI 网络流量
+                NotificationCenter.default.addObserver(self, selector: #selector(changeNetworkMode),
+                                                       name: NSNotification.Name(rawValue: "networkMode"), object: nil)
+            case 4: // 非 WIFI 网络播放提醒
+                NotificationCenter.default.addObserver(self, selector: #selector(changeNetworkMode),
+                                                       name: NSNotification.Name(rawValue: "playNotice"), object: nil)
             default:
                 break
             }
@@ -54,7 +66,6 @@ class SettingViewController: UITableViewController {
         return cell
     }
     
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 去掉默认的点击效果
         tableView.deselectRow(at: indexPath, animated: true)
@@ -64,13 +75,19 @@ class SettingViewController: UITableViewController {
             case 0: // 清理缓存
                 // 弹出清理缓存的提示框
                 clearCacheAlertController()
+            case 1: // 设置字体大小
+                setunFontAlertController()
+            case 3: // 设置非 WIFI 网络流量
+                setupNetworkAlertController()
+            case 4: // 非 WIFI 网络播放提醒
+                setupPlayNoticeAlertController()
             default:
                 break
             }
             
         default:
             break
-        }        
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -134,6 +151,85 @@ class SettingViewController: UITableViewController {
 
 
 extension SettingViewController {
+    
+    /// 非 WIFI 网络流量
+    @objc fileprivate func changePlayNotice(notification: Notification) {
+        let userInfo = notification.userInfo as! [String: AnyObject]
+        let indexPath = IndexPath(row: 4, section: 0)
+        let cell = tableView.cellForRow(at: indexPath) as! SettingCell
+        cell.rightTitleLabel.text = userInfo["playNotice"] as? String
+    }
+    /// 非 WIFI 网络播放提醒
+    fileprivate func setupPlayNoticeAlertController() {
+        let alertController = UIAlertController(title: "非 WIFI 网络播放提醒", message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let everyAction = UIAlertAction(title: "每次提醒", style: .default, handler: { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "playNotice"), object: self, userInfo: ["playNotice": "每次提醒"])
+        })
+        let onceAction = UIAlertAction(title: "提醒一次", style: .default, handler: { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "playNotice"), object: self, userInfo: ["playNotice": "提醒一次"])
+        })
+        alertController.addAction(cancelAction)
+        alertController.addAction(onceAction)
+        alertController.addAction(everyAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    /// 非 WIFI 网络流量
+    @objc fileprivate func changeNetworkMode(notification: Notification) {
+        let userInfo = notification.userInfo as! [String: AnyObject]
+        let indexPath = IndexPath(row: 3, section: 0)
+        let cell = tableView.cellForRow(at: indexPath) as! SettingCell
+        cell.rightTitleLabel.text = userInfo["networkMode"] as? String
+    }
+    /// 设置非 WIFI 网络流量
+    fileprivate func setupNetworkAlertController() {
+        let alertController = UIAlertController(title: "非 WIFI 网络流量", message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let bestAction = UIAlertAction(title: "最佳效果（下载大图）", style: .default, handler: { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "networkMode"), object: self, userInfo: ["networkMode": "最小效果（下载大图）"])
+        })
+        let betterAction = UIAlertAction(title: "较省流量（智能下图）", style: .default, handler: { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "networkMode"), object: self, userInfo: ["networkMode": "较省流量（智能下图）"])
+        })
+        let leastAction = UIAlertAction(title: "极省流量（智能下图）", style: .default, handler: { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "networkMode"), object: self, userInfo: ["networkMode": "极省流量（智能下图）"])
+        })
+        alertController.addAction(cancelAction)
+        alertController.addAction(bestAction)
+        alertController.addAction(betterAction)
+        alertController.addAction(leastAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    /// 改变字体大小
+    @objc fileprivate func changeFontSize(notification: Notification) {
+        let userInfo = notification.userInfo as! [String: AnyObject]
+        let indexPath = IndexPath(row: 1, section: 0)
+        let cell = tableView.cellForRow(at: indexPath) as! SettingCell
+        cell.rightTitleLabel.text = userInfo["fontSize"] as? String
+    }
+    /// 设置字体大小
+    fileprivate func setunFontAlertController() {
+        let alertController = UIAlertController(title: "设置字体大小", message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let smallAction = UIAlertAction(title: "小", style: .default, handler: { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "fontSize"), object: self, userInfo: ["fontSize": "小"])
+        })
+        let middleAction = UIAlertAction(title: "中", style: .default, handler: { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "fontSize"), object: self, userInfo: ["fontSize": "中"])
+        })
+        let bigAction = UIAlertAction(title: "大", style: .default, handler: { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "fontSize"), object: self, userInfo: ["fontSize": "大"])
+        })
+        let largeAction = UIAlertAction(title: "特大", style: .default, handler: { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "fontSize"), object: self, userInfo: ["fontSize": "特大"])
+        })
+        alertController.addAction(cancelAction)
+        alertController.addAction(smallAction)
+        alertController.addAction(middleAction)
+        alertController.addAction(bigAction)
+        alertController.addAction(largeAction)
+        present(alertController, animated: true, completion: nil)
+    }
     
     /// 从沙盒中获取缓存数据大小
     fileprivate func calculateDiskCacheSize() {

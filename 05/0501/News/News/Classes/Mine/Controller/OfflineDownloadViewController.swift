@@ -9,8 +9,11 @@
 import UIKit
 
 class OfflineDownloadViewController: UITableViewController {
+    
+    var titles = [HomeNewsTitle]()
 
     override func viewDidLoad() {
+        print("OfflineDownloadViewController.viewDidLoad")
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -19,29 +22,56 @@ class OfflineDownloadViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         tableView.ymRegisterCell(cell: OfflineDownloadCell.self)
+        
+        tableView.rowHeight = 44
+        tableView.theme_separatorColor = "colors.separatorViewColor"
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
+        //
+        NetworkTool.loadHomeNewsTitleData { (titles) in
+            self.titles = titles
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 44))
+        view.theme_backgroundColor = "colors.tableViewBackgroundColor"
+        // 标签
+        let label = UILabel(frame: CGRect(x: 20, y: 0, width: SCREEN_WIDTH, height: 44))
+        label.text = "我的频道"
+        label.theme_textColor = "colors.black"
+        // 分割线
+        let separatorView  = UIView(frame: CGRect(x: 0, y: 43, width: SCREEN_WIDTH, height: 1))
+        separatorView.theme_backgroundColor = "colors.separatorViewColor"
+        
+        view.addSubview(label)
+        view.addSubview(separatorView)
+        return view
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return titles.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.ymDequeueReusableCell(indexPath: indexPath) as OfflineDownloadCell
-
-        // Configure the cell...
-
+        let newsTitle = titles[indexPath.row]
+        cell.titleLabel.text = newsTitle.name
         return cell
     }
- 
 
     /*
     // Override to support conditional editing of the table view.

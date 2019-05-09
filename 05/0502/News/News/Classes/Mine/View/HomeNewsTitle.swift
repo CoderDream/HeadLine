@@ -20,4 +20,6 @@ struct HomeNewsTitle: HandyJSON {
     var flags: Int = 0
     var type: Int = 0
     var name: String = ""
+    
+    var selected: Bool = true
 }

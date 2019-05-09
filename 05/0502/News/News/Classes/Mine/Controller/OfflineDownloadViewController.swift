@@ -9,29 +9,23 @@
 import UIKit
 
 class OfflineDownloadViewController: UITableViewController {
-    
-    var titles = [HomeNewsTitle]()
+    // 标题数组
+    fileprivate var titles = [HomeNewsTitle]()
+    // 标题数据表
+    fileprivate let newsTitleTable = NewsTitleTable()
 
     override func viewDidLoad() {
-        print("OfflineDownloadViewController.viewDidLoad")
+        //print("OfflineDownloadViewController.viewDidLoad")
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         tableView.ymRegisterCell(cell: OfflineDownloadCell.self)
-        
         tableView.rowHeight = 44
         tableView.theme_separatorColor = "colors.separatorViewColor"
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
         //
-        NetworkTool.loadHomeNewsTitleData { (titles) in
-            self.titles = titles
-            self.tableView.reloadData()
-        }
+
+        // 从数据库中取出所有数据，赋值给 标题数组 titles
+        titles = newsTitleTable.selectAll()
     }
 
     // MARK: - Table view data source
@@ -70,7 +64,25 @@ class OfflineDownloadViewController: UITableViewController {
         let cell = tableView.ymDequeueReusableCell(indexPath: indexPath) as OfflineDownloadCell
         let newsTitle = titles[indexPath.row]
         cell.titleLabel.text = newsTitle.name
+        cell.rightImageView.theme_image = newsTitle.selected ? "images.air_download_option_press" : "images.air_download_option"
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 取出数组中的第 row 个对象
+        var homeNewsTitle = titles[indexPath.row]
+        // 取反
+        homeNewsTitle.selected = !homeNewsTitle.selected
+        // 取出第 row 个 Cell
+        let cell = tableView.cellForRow(at: indexPath) as! OfflineDownloadCell
+        // 改变 cell 中的图片
+        cell.rightImageView.theme_image = homeNewsTitle.selected ? "images.air_download_option_press" : "images.air_download_option"
+        // 替换数组中的数据
+        titles[indexPath.row] = homeNewsTitle
+        // 更新数据库中的数据
+        newsTitleTable.update(homeNewsTitle)
+        // 更新页面中的 Cell
+        tableView.reloadRows(at: [indexPath], with: .none)
     }
 
     /*

@@ -129,6 +129,8 @@ extension MineViewController {
             if concerns.count > 1 {
                 cell.myConcerns = concerns
             }
+            // 设置代理
+            cell.delegate = self
             return cell
         }
         
@@ -188,5 +190,13 @@ extension MineViewController {
             headerView.bgImageView.frame = CGRect(x: -SCREEN_WIDTH * (f - 1) * 0.5, y: offsetY, width: SCREEN_WIDTH * f, height: totalOffset)
             
         }
+    }
+}
+
+extension MineViewController: MyFirstSectionCellDelegate {
+    // 点击了第几个 cell
+    func MyFirstSectionCell(_ firstCell: MyFirstSectionCell, myConcern: MyConcern) {
+        let userDetailVC = UserDetailViewController()
+        navigationController?.pushViewController(userDetailVC, animated: true)
     }
 }

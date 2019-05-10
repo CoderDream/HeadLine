@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol MyFirstSectionCellDelegate: class {
+    func MyFirstSectionCell(_ firstCell: MyFirstSectionCell, myConcern: MyConcern)
+}
+
 class MyFirstSectionCell: UITableViewCell, RegisterCellOrNib {
+    
+    var delegate: MyFirstSectionCellDelegate?
     
     /// 标题
     @IBOutlet weak var leftLabel: UILabel!
@@ -78,6 +84,11 @@ extension MyFirstSectionCell: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.ymDequeueReusableCell(indexPath: indexPath) as MyConcernCell
         cell.myConcern = myConcerns[indexPath.item]
         return cell
+    }
+    // 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let myConcern = myConcerns[indexPath.item]
+        delegate?.MyFirstSectionCell(self, myConcern: myConcern)
     }
 }
 

@@ -40,6 +40,10 @@
 		3F810C732266AF3100165D41 /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F810C722266AF3100165D41 /* MyCellModel.swift */; };
 		3FC3B0872283D2EC001F93A5 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3B0862283D2EC001F93A5 /* SQLiteManager.swift */; };
 		3FC3B0892283D490001F93A5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC3B0882283D48F001F93A5 /* libsqlite3.tbd */; };
+		3FC3B08C22850FFC001F93A5 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3B08A22850FFC001F93A5 /* UserDetailViewController.swift */; };
+		3FC3B08D22850FFC001F93A5 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3B08B22850FFC001F93A5 /* UserDetailViewController.xib */; };
+		3FC3B08F228522F2001F93A5 /* UserDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3B08E228522F2001F93A5 /* UserDetailHeaderView.swift */; };
+		3FC3B09122852349001F93A5 /* UserDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3B09022852349001F93A5 /* UserDetailHeaderView.xib */; };
 		3FD86644227DD32400417362 /* MyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD86643227DD32400417362 /* MyTheme.swift */; };
 		3FFF20E02277DF130054F12B /* MyOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF20DE2277DF130054F12B /* MyOtherCell.swift */; };
 		3FFF20E12277DF130054F12B /* MyOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF20DF2277DF130054F12B /* MyOtherCell.xib */; };
@@ -88,6 +92,10 @@
 		3FC3B0842283D27B001F93A5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		3FC3B0862283D2EC001F93A5 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		3FC3B0882283D48F001F93A5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		3FC3B08A22850FFC001F93A5 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		3FC3B08B22850FFC001F93A5 /* UserDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
+		3FC3B08E228522F2001F93A5 /* UserDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailHeaderView.swift; sourceTree = "<group>"; };
+		3FC3B09022852349001F93A5 /* UserDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailHeaderView.xib; sourceTree = "<group>"; };
 		3FD86643227DD32400417362 /* MyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTheme.swift; sourceTree = "<group>"; };
 		3FFF20DE2277DF130054F12B /* MyOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOtherCell.swift; sourceTree = "<group>"; };
 		3FFF20DF2277DF130054F12B /* MyOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOtherCell.xib; sourceTree = "<group>"; };
@@ -299,6 +307,8 @@
 				3F71D0632280058000183873 /* MoreLoginViewController.storyboard */,
 				3F71D0652281192A00183873 /* SettingViewController.swift */,
 				3F3B63B422832F23006C8FC0 /* OfflineDownloadViewController.swift */,
+				3FC3B08A22850FFC001F93A5 /* UserDetailViewController.swift */,
+				3FC3B08B22850FFC001F93A5 /* UserDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -377,6 +387,8 @@
 				3F71D06C22815FDC00183873 /* SettingCell.xib */,
 				3F3B63B62283303E006C8FC0 /* OfflineDownloadCell.swift */,
 				3F3B63B72283303E006C8FC0 /* OfflineDownloadCell.xib */,
+				3FC3B08E228522F2001F93A5 /* UserDetailHeaderView.swift */,
+				3FC3B09022852349001F93A5 /* UserDetailHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -462,9 +474,11 @@
 				3F810B2822640FB100165D41 /* LaunchScreen.storyboard in Resources */,
 				3F077F7B227BFF8A009C47B5 /* MyConcernCell.xib in Resources */,
 				3F71D06E22815FDC00183873 /* SettingCell.xib in Resources */,
+				3FC3B08D22850FFC001F93A5 /* UserDetailViewController.xib in Resources */,
 				3F077F7F227C284B009C47B5 /* NoLoginHeaderView.xib in Resources */,
 				3FFF20E12277DF130054F12B /* MyOtherCell.xib in Resources */,
 				3FFF2112227ED4AA0054F12B /* default_theme.plist in Resources */,
+				3FC3B09122852349001F93A5 /* UserDetailHeaderView.xib in Resources */,
 				3FFF20E522781EB90054F12B /* MyFirstSectionCell.xib in Resources */,
 				3F71D0682281342C00183873 /* settingPlist.plist in Resources */,
 				3FFF2114227ED4DB0054F12B /* night_theme.plist in Resources */,
@@ -558,6 +572,7 @@
 				3FC3B0872283D2EC001F93A5 /* SQLiteManager.swift in Sources */,
 				3FFF20E422781EB90054F12B /* MyFirstSectionCell.swift in Sources */,
 				3F810C6A2264931800165D41 /* MyTabBarController.swift in Sources */,
+				3FC3B08C22850FFC001F93A5 /* UserDetailViewController.swift in Sources */,
 				3F006107226602F00033B010 /* Constant.swift in Sources */,
 				3F810C6E2264931800165D41 /* VideoViewController.swift in Sources */,
 				3F077F6E227BE4D4009C47B5 /* UITableViewExtension.swift in Sources */,
@@ -570,6 +585,7 @@
 				3F810C6D2264931800165D41 /* AppDelegate.swift in Sources */,
 				3F00610A226605610033B010 /* UIColorExtension.swift in Sources */,
 				3F810C682264931800165D41 /* HuoshanViewController.swift in Sources */,
+				3FC3B08F228522F2001F93A5 /* UserDetailHeaderView.swift in Sources */,
 				3F810C6C2264931800165D41 /* MineViewController.swift in Sources */,
 				3F71D06A2281352100183873 /* SettingModel.swift in Sources */,
 			);

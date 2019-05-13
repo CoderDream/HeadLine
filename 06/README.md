@@ -135,10 +135,11 @@ toutiaohao_34x14_
 - Font: 13
 - Color: RGB(230, 183, 64)
 
-新增位置按钮：
+新增位置按钮：()
 - top: 10
 - Leading(与头条认证Label）
 - Height: 20
+- View -> Interaction User Interaction Enabled: Unchecked (不能与用户交互)
 
 - Type: Custom
 - Font: System 13
@@ -158,7 +159,47 @@ toutiaohao_34x14_
 - Font: System 13
 
 
+- Weight: 30
+- Height: 28
+- right: 15
 
+Label 
+- Leading: (描述Label）
+- top: 10
+
+Label（关注）
+- left: 5
+- Vertical Center(相对左边的Label)
+- Font Size: 13
+- Color: RGB(153, 153, 153)
+
+将上面两个Label拷贝为 Label + Label(粉丝）
+- left: 10
+
+- left: 5
+
+
+新增 UIView
+- left: 0
+- right: 0
+- Height: 41
+
+给上面的 Label 设置新的约束：
+- bottom: 10
+
+在 上面的 UIView 里面新增分割线 UIView
+- top: 0
+- left: 0
+- right: 0
+- Height: 0.5
+- Color: RGB(232, 232, 232)
+
+在 上面的 UIView 里面新增 UIScrollView
+- top: 0
+- left: 0
+- bottom: 0
+- right: 0
+- color: Clean Color
 
 
 

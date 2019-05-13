@@ -13,10 +13,21 @@ class UserDetailViewController: UIViewController {
     
     @IBOutlet weak var bottomView: UIView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        scrollView.addSubview(headerView)
+        scrollView.contentSize = CGSize(width: SCREEN_WIDTH, height: 1000)
     }
+    
+    /// 懒加载
+    lazy var headerView: UserDetailHeaderView = {
+        let headerView = UserDetailHeaderView.headerView()
+        return headerView
+    }()
 
 }

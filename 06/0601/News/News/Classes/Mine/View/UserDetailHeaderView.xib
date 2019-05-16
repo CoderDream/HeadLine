@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,13 +16,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper_profile_night" translatesAutoresizingMaskIntoConstraints="NO" id="xer-V9-OGN">
-                    <rect key="frame" x="0.0" y="-24" width="375" height="146"/>
+                    <rect key="frame" x="0.0" y="-44" width="375" height="146"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="146" id="Dk5-u4-Oyq"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPL-OZ-bp3">
-                    <rect key="frame" x="0.0" y="122" width="375" height="545"/>
+                    <rect key="frame" x="0.0" y="102" width="375" height="565"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hFr-QH-K0F" customClass="AnimatableImageView" customModule="IBAnimatable">
                             <rect key="frame" x="15" y="-36" width="72" height="72"/>
@@ -262,16 +261,15 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="xer-V9-OGN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-44" id="8Ee-EH-eiF"/>
-                <constraint firstItem="xer-V9-OGN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QG8-dW-TCa"/>
+                <constraint firstItem="xer-V9-OGN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-44" id="8Ee-EH-eiF"/>
+                <constraint firstItem="xer-V9-OGN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QG8-dW-TCa"/>
                 <constraint firstItem="qPL-OZ-bp3" firstAttribute="top" secondItem="xer-V9-OGN" secondAttribute="bottom" id="SGR-JV-Fmp"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qPL-OZ-bp3" secondAttribute="trailing" id="SzJ-MR-2J5"/>
-                <constraint firstItem="qPL-OZ-bp3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Uqm-fT-RSK"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xer-V9-OGN" secondAttribute="trailing" id="dVB-jB-CBP"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qPL-OZ-bp3" secondAttribute="bottom" id="x4n-7H-zYb"/>
+                <constraint firstAttribute="trailing" secondItem="qPL-OZ-bp3" secondAttribute="trailing" id="SzJ-MR-2J5"/>
+                <constraint firstItem="qPL-OZ-bp3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Uqm-fT-RSK"/>
+                <constraint firstAttribute="trailing" secondItem="xer-V9-OGN" secondAttribute="trailing" id="dVB-jB-CBP"/>
+                <constraint firstAttribute="bottom" secondItem="qPL-OZ-bp3" secondAttribute="bottom" id="x4n-7H-zYb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="areaButton" destination="Ngy-0y-TSl" id="Ssk-B1-TcU"/>
                 <outlet property="areaButtonHeight" destination="KS8-ze-yv2" id="avt-up-gDb"/>

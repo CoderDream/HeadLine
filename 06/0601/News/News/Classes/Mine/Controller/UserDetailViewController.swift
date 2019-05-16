@@ -13,6 +13,9 @@ class UserDetailViewController: UIViewController {
     
     @IBOutlet weak var bottomView: UIView!
     
+    @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var bottomViewBottom: NSLayoutConstraint!
     // 隐藏导航栏
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,6 +29,11 @@ class UserDetailViewController: UIViewController {
         view.backgroundColor = .white
         scrollView.addSubview(headerView)
         scrollView.contentSize = CGSize(width: SCREEN_WIDTH, height: 1000)
+        
+        // 判断设置型号，设置约束，避免 bottomView 顶到边界
+        bottomViewBottom.constant = isIPhoneX ? 34 : 0
+        //
+        view.layoutIfNeeded()
     }
     
     /// 懒加载
@@ -33,5 +41,10 @@ class UserDetailViewController: UIViewController {
         let headerView = UserDetailHeaderView.headerView()
         return headerView
     }()
+    
+    // 更改颜色
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
 }

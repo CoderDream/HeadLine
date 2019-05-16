@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserDetailViewController" customModule="News" customModuleProvider="target">
             <connections>
                 <outlet property="bottomView" destination="hqA-S9-rGp" id="0fp-GP-xd8"/>
+                <outlet property="bottomViewBottom" destination="tSa-uw-OT9" id="DM4-dV-vGn"/>
+                <outlet property="bottomViewHeight" destination="viw-fn-eXB" id="XzU-Nh-wbw"/>
                 <outlet property="scrollView" destination="qf1-ij-xQb" id="AU8-nC-16E"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

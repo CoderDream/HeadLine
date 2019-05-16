@@ -212,3 +212,20 @@ UserDetailViewController
     
 
 
+适配iPhone X，
+设置 UserDetailHeaderView.xib
+
+选中最顶端的【User Detail Header View】，选择【Show the File inspector】，然后把 Interface Builder Document 下面的 Use Safe Area Layout Guides 的勾选☑️去掉
+
+
+
+
+
+
+
+
+
+
+
+
+

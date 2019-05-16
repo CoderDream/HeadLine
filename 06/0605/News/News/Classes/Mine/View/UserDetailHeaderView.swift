@@ -67,8 +67,83 @@ class UserDetailHeaderView: UIView {
     /// 底部的 ScrollView
     //@IBOutlet weak var bottomScrollView: UIScrollView!
     
-    @IBAction func sendMailClicked(_ sender: Any) {
+    /// 发私信按钮点击
+    @IBAction func sendMailButtonClicked() {
         
+    }
+    
+    /// 关注按钮点击
+    @IBAction func concernButtonClicked(_ sender: AnimatableButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected { // 已经关注，点击则取消关注
+            // 取消关注
+            NetworkTool.loadRelationUnfollow(user_id: userDetail!.user_id, completionHandler: { (_) in
+                self.recommendButton.isHidden = true
+                self.recommendButton.isSelected = false
+                self.recommendButtonWidth.constant = 0
+                self.recommendButtonTrailing.constant = 0
+                self.recommendViewHeight.constant = 0
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.recommendButton.imageView?.transform = .identity
+                    self.layoutIfNeeded()
+                })
+            })
+        } else { // 未关注，点击则关注
+            // 关注用户
+            NetworkTool.loadRelationFollow(user_id: userDetail!.user_id, completionHandler: { (_) in
+                self.recommendButton.isHidden = false
+                self.recommendButton.isSelected = false
+                self.recommendButtonWidth.constant = 28.0
+                self.recommendButtonTrailing.constant = 15.0
+                self.recommendViewHeight.constant = 223
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.layoutIfNeeded()
+                }, completion: { (_) in
+                    self.resetLayout()
+                    // 点击了关注按钮，就会出现相关推荐数据
+                    NetworkTool.loadRelationUserRecommend(user_id: self.userDetail!.user_id, completionHandler: { (userCard) in
+                        
+                    })
+                })
+            })
+        }
+        
+    }
+    
+    /// 推荐关注按钮点击
+    @IBAction func recommendButtonClicked(_ sender: AnimatableButton) {
+        sender.isSelected = !sender.isSelected
+        recommendViewHeight.constant = sender.isSelected ? 0 : 223.0
+        UIView.animate(withDuration: 0.25, animations: {
+            sender.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(sender.isSelected ? Double.pi : 0))
+            self.layoutIfNeeded()
+        }) { (_) in
+            self.resetLayout()
+        }
+    }
+    
+    /// 展开按钮点击
+    @IBAction func unfoldButtonClicked() {
+        unfoldButton.isHidden = true
+        unfoldButtonWidth.constant = 0
+        descriptionLabelHeight.constant = userDetail!.descriptionHeight!
+        
+        // UILabel填满一行后自动换行，三句代码搞定
+        // https://blog.csdn.net/haha223545/article/details/80111109
+        descriptionLabel.lineBreakMode = NSLineBreakMode.byWordWrapping;
+        descriptionLabel.numberOfLines = 0;
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            self.layoutIfNeeded()
+        }) { (_) in
+            self.resetLayout()
+        }
+    }
+    
+    /// 点击展开按钮后，刷新视图的高度
+    private func resetLayout()  {
+        baseView.height = topTabView.frame.maxY
+        height = baseView.frame.maxY
     }
     
     var userDetail: UserDetail? {
@@ -104,6 +179,9 @@ class UserDetailHeaderView: UIView {
                 unfoldButton.isHidden = false
                 unfoldButtonWidth.constant = 40
             }
+            // 推荐按钮的约束
+            recommendButtonWidth.constant = 0
+            recommendButtonTrailing.constant = 10.0
             
             //
             followersCountLabel.text = userDetail!.followersCount

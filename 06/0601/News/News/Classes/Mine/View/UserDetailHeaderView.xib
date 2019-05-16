@@ -124,8 +124,8 @@
                             <color key="textColor" red="0.90196078431372551" green="0.71764705882352942" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNG-Eh-fNr">
-                            <rect key="frame" x="82" y="86" width="33" height="16"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNG-Eh-fNr">
+                            <rect key="frame" x="82" y="86" width="0.0" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -225,6 +225,7 @@
                         <constraint firstItem="Z9w-Qw-0BU" firstAttribute="top" secondItem="Ngy-0y-TSl" secondAttribute="bottom" constant="10" id="JAS-eN-dda"/>
                         <constraint firstItem="zJj-q0-5No" firstAttribute="leading" secondItem="r2X-GN-nhm" secondAttribute="trailing" constant="5" id="JAb-eH-i2N"/>
                         <constraint firstItem="WwL-vS-Gih" firstAttribute="top" secondItem="qPL-OZ-bp3" secondAttribute="top" constant="15" id="LGn-A5-QzU"/>
+                        <constraint firstItem="aNG-Eh-fNr" firstAttribute="height" secondItem="fyL-6n-l68" secondAttribute="height" id="LSg-AW-lIJ"/>
                         <constraint firstItem="fyL-6n-l68" firstAttribute="leading" secondItem="mTd-BO-uir" secondAttribute="leading" id="NTf-T1-bkb"/>
                         <constraint firstItem="BRU-WJ-QrI" firstAttribute="trailing" secondItem="hFr-QH-K0F" secondAttribute="trailing" id="OQ8-Ka-JcP"/>
                         <constraint firstAttribute="trailing" secondItem="WwL-vS-Gih" secondAttribute="trailing" constant="15" id="OWG-Ja-agX"/>

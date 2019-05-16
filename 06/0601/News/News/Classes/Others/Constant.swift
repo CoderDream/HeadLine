@@ -14,8 +14,8 @@ let SCREEN_WIDTH = UIScreen.main.bounds.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.height
 
 let BASE_URL = "https://is.snssdk.com"
-let device_id: String = "6096495334"
-let iid: String = "5034850950"
+let device_id: Int = 6096495334
+let iid: Int = 5034850950
 
 let kMyHeaderViewHeight: CGFloat = 280
 

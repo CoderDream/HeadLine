@@ -16,6 +16,9 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var bottomViewBottom: NSLayoutConstraint!
+    var userId: Int = 0
+    var userDetail: UserDetail?
+    
     // 隐藏导航栏
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,6 +37,17 @@ class UserDetailViewController: UIViewController {
         bottomViewBottom.constant = isIPhoneX ? 34 : 0
         //
         view.layoutIfNeeded()
+        // 调用接口
+        NetworkTool.loadUserDetail(user_id: userId) { (userDetail) in
+            self.userDetail = userDetail
+            self.headerView.userDetail = userDetail
+            if userDetail.bottom_tab.count == 0 {
+                self.bottomViewBottom.constant = 0
+                self.view.layoutIfNeeded()
+            } else {
+                // 赋值到 bottomView 上
+            }
+        }
     }
     
     /// 懒加载

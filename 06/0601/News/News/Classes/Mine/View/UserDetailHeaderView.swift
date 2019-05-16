@@ -8,6 +8,7 @@
 
 import UIKit
 import IBAnimatable
+import Kingfisher
 
 class UserDetailHeaderView: UIView {
     /// 背景图片
@@ -65,6 +66,35 @@ class UserDetailHeaderView: UIView {
     @IBOutlet weak var baseView: UIView!
     /// 底部的 ScrollView
     //@IBOutlet weak var bottomScrollView: UIScrollView!
+    
+    
+    var userDetail: UserDetail? {
+        didSet {
+            // 背景图片
+            backgroundImageView.kf.setImage(with: URL(string: userDetail!.bg_img_url)!)
+            // 头像
+            avatarImageView.kf.setImage(with: URL(string: userDetail!.avatar_url)!)
+            // VIP 图片
+            vImageView.isHidden = userDetail!.user_verified
+            nameLabel.text = userDetail!.screen_name
+            // 头条认证（如果为空，这约束（高度和top）设置为0，相当于隐藏）
+            if userDetail!.verified_agency == "" {
+                verifiedAgencyLabelHeight.constant = 0
+                verifiedAgencyLabelTop.constant = 0
+            } else {
+                verifiedAgencyLabel.text = userDetail!.verified_agency + "："
+                verifiedContentLabel.text = userDetail!.verified_content
+            }
+            // 关注
+            concernButton.isSelected = userDetail!.is_following
+            //
+            if let area = userDetail!.area {
+                areaButton.setTitle(area, for: .normal)
+            } else {
+                
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

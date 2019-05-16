@@ -217,6 +217,11 @@ UserDetailViewController
 
 选中最顶端的【User Detail Header View】，选择【Show the File inspector】，然后把 Interface Builder Document 下面的 Use Safe Area Layout Guides 的勾选☑️去掉
 
+增加约束：
+头条认证Label和右边的内容Label等高
+
+
+
 
 
 

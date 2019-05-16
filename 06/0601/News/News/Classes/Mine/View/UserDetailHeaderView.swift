@@ -88,11 +88,24 @@ class UserDetailHeaderView: UIView {
             // 关注
             concernButton.isSelected = userDetail!.is_following
             //
-            if let area = userDetail!.area {
-                areaButton.setTitle(area, for: .normal)
+            if userDetail!.area == "" {
+                areaButton.isHidden = true
+                areaButtonHeight.constant = 0
+                areaButtonTop.constant = 0
             } else {
-                
+                areaButton.setTitle(userDetail!.area, for: .normal)
             }
+            // 描述
+            descriptionLabel.text = userDetail!.description
+            if userDetail!.descriptionHeight! > 21 {
+                unfoldButton.isHidden = false
+                unfoldButtonWidth.constant = 40
+            }
+            
+            //
+            followersCountLabel.text = userDetail!.followersCount
+            followingsCountLabel.text = userDetail!.followingsCount
+            layoutIfNeeded()
         }
     }
     

@@ -94,6 +94,9 @@
                             <state key="normal" title="发私信">
                                 <color key="titleColor" red="0.28235294119999998" green="0.39215686274509803" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="a:" destination="iN0-l3-epB" eventType="touchUpInside" id="Lk4-Tg-aeG"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dd-Nd-nnf">
                             <rect key="frame" x="0.0" y="52" width="375" height="0.0"/>

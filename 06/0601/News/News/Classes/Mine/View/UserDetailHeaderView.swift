@@ -109,6 +109,10 @@ class UserDetailHeaderView: UIView {
         }
     }
     
+    @IBAction func sendMailButtonClick() {
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

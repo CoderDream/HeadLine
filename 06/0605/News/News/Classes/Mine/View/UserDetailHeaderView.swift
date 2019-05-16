@@ -67,6 +67,9 @@ class UserDetailHeaderView: UIView {
     /// 底部的 ScrollView
     //@IBOutlet weak var bottomScrollView: UIScrollView!
     
+    @IBAction func sendMailClicked(_ sender: Any) {
+        
+    }
     
     var userDetail: UserDetail? {
         didSet {
@@ -107,6 +110,10 @@ class UserDetailHeaderView: UIView {
             followingsCountLabel.text = userDetail!.followingsCount
             layoutIfNeeded()
         }
+    }
+    
+    @IBAction func sendMailButtonClick() {
+        
     }
     
     override func awakeFromNib() {

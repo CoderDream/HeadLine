@@ -202,7 +202,13 @@ Label（关注）
 - color: Clean Color
 
 
-
-
+UserDetailViewController
+隐藏
+    // 隐藏导航栏
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
 
 

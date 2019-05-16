@@ -64,7 +64,7 @@ class UserDetailHeaderView: UIView {
     /// 底层 view
     @IBOutlet weak var baseView: UIView!
     /// 底部的 ScrollView
-    //@IBOutlet weak var bottomScrollView: UIScrollView!
+    @IBOutlet weak var bottomScrollView: UIScrollView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

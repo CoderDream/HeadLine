@@ -13,7 +13,11 @@ class UserDetailViewController: UIViewController {
     
     @IBOutlet weak var bottomView: UIView!
     
-    
+    // 隐藏导航栏
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

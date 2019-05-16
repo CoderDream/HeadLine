@@ -9,12 +9,12 @@
 import UIKit
 
 protocol MyFirstSectionCellDelegate: class {
-    func MyFirstSectionCell(_ firstCell: MyFirstSectionCell, myConcern: MyConcern)
+    func myFirstSectionCell(_ firstCell: MyFirstSectionCell, myConcern: MyConcern)
 }
 
 class MyFirstSectionCell: UITableViewCell, RegisterCellOrNib {
     
-    var delegate: MyFirstSectionCellDelegate?
+    weak var delegate: MyFirstSectionCellDelegate?
     
     /// 标题
     @IBOutlet weak var leftLabel: UILabel!
@@ -88,7 +88,7 @@ extension MyFirstSectionCell: UICollectionViewDelegate, UICollectionViewDataSour
     // 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let myConcern = myConcerns[indexPath.item]
-        delegate?.MyFirstSectionCell(self, myConcern: myConcern)
+        delegate?.myFirstSectionCell(self, myConcern: myConcern)
     }
 }
 

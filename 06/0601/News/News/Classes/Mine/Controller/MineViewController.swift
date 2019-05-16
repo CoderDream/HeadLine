@@ -195,7 +195,7 @@ extension MineViewController {
 
 extension MineViewController: MyFirstSectionCellDelegate {
     // 点击了第几个 cell
-    func MyFirstSectionCell(_ firstCell: MyFirstSectionCell, myConcern: MyConcern) {
+    func myFirstSectionCell(_ firstCell: MyFirstSectionCell, myConcern: MyConcern) {
         let userDetailVC = UserDetailViewController()
         navigationController?.pushViewController(userDetailVC, animated: true)
     }

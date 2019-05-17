@@ -102,6 +102,7 @@
                             </state>
                             <connections>
                                 <action selector="a:" destination="iN0-l3-epB" eventType="touchUpInside" id="Lk4-Tg-aeG"/>
+                                <action selector="sendMailButtonClicked" destination="iN0-l3-epB" eventType="touchUpInside" id="fJw-fg-hbF"/>
                                 <action selector="sendMailClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="hK9-cq-pO8"/>
                             </connections>
                         </button>

@@ -27,6 +27,7 @@ class UserDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("UserDetailViewController.viewDidLoad")
 
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
@@ -36,14 +37,14 @@ class UserDetailViewController: UIViewController {
         // 判断设置型号，设置约束，避免 bottomView 顶到边界
         bottomViewBottom.constant = isIPhoneX ? 34 : 0
         //
-        view.layoutIfNeeded()
+        //view.layoutIfNeeded()
         // 调用接口
         NetworkTool.loadUserDetail(user_id: userId) { (userDetail) in
             self.userDetail = userDetail
             self.headerView.userDetail = userDetail
             if userDetail.bottom_tab.count == 0 {
                 self.bottomViewBottom.constant = 0
-                self.view.layoutIfNeeded()
+                //self.view.layoutIfNeeded()
             } else {
                 // 赋值到 bottomView 上
             }

@@ -180,8 +180,8 @@ class UserDetailHeaderView: UIView {
                 unfoldButtonWidth.constant = 40
             }
             // 推荐按钮的约束
-            recommendButtonWidth.constant = 0
-            recommendButtonTrailing.constant = 10.0
+            //recommendButtonWidth.constant = 0
+            //recommendButtonTrailing.constant = 10.0
             
             //
             followersCountLabel.text = userDetail!.followersCount

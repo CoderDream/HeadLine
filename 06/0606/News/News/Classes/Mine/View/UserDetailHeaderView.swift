@@ -74,10 +74,13 @@ class UserDetailHeaderView: UIView {
     
     /// 关注按钮点击
     @IBAction func concernButtonClicked(_ sender: AnimatableButton) {
+        print("concernButtonClicked")
         sender.isSelected = !sender.isSelected
         if sender.isSelected { // 已经关注，点击则取消关注
             // 取消关注
             NetworkTool.loadRelationUnfollow(user_id: userDetail!.user_id, completionHandler: { (_) in
+                
+                sender.isSelected = !sender.isSelected
                 self.recommendButton.isHidden = true
                 self.recommendButton.isSelected = false
                 self.recommendButtonWidth.constant = 0
@@ -91,6 +94,8 @@ class UserDetailHeaderView: UIView {
         } else { // 未关注，点击则关注
             // 关注用户
             NetworkTool.loadRelationFollow(user_id: userDetail!.user_id, completionHandler: { (_) in
+                
+                sender.isSelected = !sender.isSelected
                 self.recommendButton.isHidden = false
                 self.recommendButton.isSelected = false
                 self.recommendButtonWidth.constant = 28.0
@@ -111,7 +116,8 @@ class UserDetailHeaderView: UIView {
     }
     
     /// 推荐关注按钮点击
-    @IBAction func recommendButtonClicked(_ sender: AnimatableButton) {
+    @IBAction func recommendButtonClicked(_ sender: AnimatableButton) {        
+        print("recommendButtonClicked")
         sender.isSelected = !sender.isSelected
         recommendViewHeight.constant = sender.isSelected ? 0 : 223.0
         UIView.animate(withDuration: 0.25, animations: {

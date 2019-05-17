@@ -80,7 +80,7 @@ class UserDetailHeaderView: UIView {
             // 取消关注
             NetworkTool.loadRelationUnfollow(user_id: userDetail!.user_id, completionHandler: { (_) in
                 
-                sender.isSelected = !sender.isSelected
+                //sender.isSelected = !sender.isSelected
                 self.recommendButton.isHidden = true
                 self.recommendButton.isSelected = false
                 self.recommendButtonWidth.constant = 0
@@ -95,7 +95,7 @@ class UserDetailHeaderView: UIView {
             // 关注用户
             NetworkTool.loadRelationFollow(user_id: userDetail!.user_id, completionHandler: { (_) in
                 
-                sender.isSelected = !sender.isSelected
+                //sender.isSelected = !sender.isSelected
                 self.recommendButton.isHidden = false
                 self.recommendButton.isSelected = false
                 self.recommendButtonWidth.constant = 28.0
@@ -185,7 +185,7 @@ class UserDetailHeaderView: UIView {
                 unfoldButton.isHidden = false
                 unfoldButtonWidth.constant = 40
             }
-            // 推荐按钮的约束
+            // 推荐按钮的约束 (如果已经关注，则不显示推荐按钮）
             recommendButtonWidth.constant = 0
             recommendButtonTrailing.constant = 10.0
             
@@ -202,6 +202,8 @@ class UserDetailHeaderView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        concernButton.setTitle("关注", for: .normal)
+        concernButton.setTitle("已关注", for: .selected)
     }
     
     class func headerView() -> UserDetailHeaderView {

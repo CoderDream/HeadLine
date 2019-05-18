@@ -45,12 +45,29 @@ class UserDetailBottomPushController: UIViewController {
 
 2. 显示导航栏，由于在UserDetailViewController隐藏了导航栏，这里要把它显示出来  
 ```swift  
-    // 显示导航栏
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
+// 显示导航栏
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(false, animated: animated)
+}
 ```
+
+## 新建 UserDetailBottomPopController 和 storyboard
+
+1. 给 storyboard 新增一个 View Controller，设置类为 UserDetailBottomPopController， id 也为 UserDetailBottomPopController，然后去掉 Safe Area （选择UIView Controller，打开 Show the File inspector 面板，去掉 Use Safe Area Layout Guides 前面的勾选框☑️）
+
+2. 新增一个背景图片视图 UIImageView，设置约束
+- top: 0
+- left: 0
+- bottom: 0
+- right: 0
+
+
+
+然后修改
+- top: -10
+- bottom: -10
+
 
 ## UserDetailViewController
 

@@ -1,12 +1,70 @@
-
+## 704-自定义弹出视图(52分钟)
 UIViewExtension
 
+### 优化UserDetailBottomView
+1. 新增协议
 ```swift
-protocol NibLoadable {}
+protocol UserDetailBottomViewDelegate: class {
+    /// bottomView 底部按钮的点击
+    func bottomView(clicked button: UIButton, bottomTab: BottomTab)
+}
+```
 
-extension NibLoadable {
-    static func loadViewFromNib() -> Self {
-        return Bundle.main.loadNibNamed("\(self)", owner: nil, options: nil)?.last as! Self
+2. 新增代理变量  
+```swift
+weak var delegate: UserDetailBottomViewDelegate?
+```
+    
+3. 更新点击事件    
+```swift
+/// bottomTa 按钮点击事件
+@objc func bottomTabButtonClicked(button: UIButton) {
+    delegate?.bottomView(clicked: button, bottomTab: bottomTabs[button.tag])
+}
+```
+
+## 新建 UserDetailBottomPushController
+1. 新建控制器  
+```swift  
+import UIKit
+import WebKit
+
+class UserDetailBottomPushController: UIViewController {
+    
+    var url: String?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let webView = WKWebView()
+        webView.frame = view.bounds
+        webView.load(URLRequest(url: URL(string: url!)!))
+        view.addSubview(webView)
     }
+}
+```
+
+2. 显示导航栏，由于在UserDetailViewController隐藏了导航栏，这里要把它显示出来  
+```swift  
+    // 显示导航栏
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+```
+
+## UserDetailViewController
+
+1. 新建扩展
+
+```swift
+extension UserDetailViewController: UserDetailBottomViewDelegate {
+    // bottomView 底部按钮的点击
+    func bottomView(clicked button: UIButton, bottomTab: BottomTab) {
+        if bottomTab.children.count == 0 { // 直接跳转到下一控制器
+
+        } else { // 弹出子视图
+
+        }
+    }   
 }
 ```

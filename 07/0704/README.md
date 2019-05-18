@@ -58,16 +58,17 @@ override func viewWillAppear(_ animated: Bool) {
 
 2. 新增一个背景图片视图 UIImageView，设置约束
 - top: 0
-- left: 0
+- Leading(left): 0
 - bottom: 0
-- right: 0
+- Trailing(right): 0
 
 
 
 然后修改
-- top: -10
-- bottom: -10
-
+- Leading: -10
+- Trailing: -10
+- 设置界面如下：
+![](https://raw.githubusercontent.com/CoderDream/HeadLine/master/snapshot/0704001.jpg)
 
 ## UserDetailViewController
 

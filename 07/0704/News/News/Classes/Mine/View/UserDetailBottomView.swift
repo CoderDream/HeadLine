@@ -45,12 +45,12 @@ class UserDetailBottomView: UIView {
     /// bottomTab 按钮点击事件
     @objc func bottomTabButtonClicked(button: UIButton) {
         delegate?.bottomView(clicked: button, bottomTab: bottomTabs[button.tag])
-        let bottomTab = bottomTabs[button.tag]
-        if bottomTab.children.count == 0 { // 直接跳转到下一控制器
-            
-        } else { // 弹出子视图
-            
-        }
+//        let bottomTab = bottomTabs[button.tag]
+//        if bottomTab.children.count == 0 { // 直接跳转到下一控制器
+//            
+//        } else { // 弹出子视图
+//            
+//        }
     }
     
     override init(frame: CGRect) {

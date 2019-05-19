@@ -62,6 +62,8 @@ class UserDetailViewController: UIViewController {
     /// 懒加载
     fileprivate lazy var myBottomView: UserDetailBottomView = {
         let myBottomView = UserDetailBottomView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 44))
+        // 设置代理
+        myBottomView.delegate = self
         return myBottomView
     }()
     
@@ -70,4 +72,27 @@ class UserDetailViewController: UIViewController {
         return .lightContent
     }
 
+}
+
+extension UserDetailViewController: UserDetailBottomViewDelegate {
+    // bottomView 底部按钮的点击
+    func bottomView(clicked button: UIButton, bottomTab: BottomTab) {
+        let bottomPushVC = UserDetailBottomPushController()
+        bottomPushVC.navigationItem.title = "网页浏览"
+        if bottomTab.children.count == 0 { // 直接跳转到下一控制器
+            bottomPushVC.url = bottomTab.value
+            navigationController?.pushViewController(bottomPushVC, animated: true)
+        } else { // 弹出子视图
+            let sb = UIStoryboard(name: "\(UserDetailBottomPopController.self)", bundle: nil)
+            let popoverVC = sb.instantiateViewController(withIdentifier: "\(UserDetailBottomPopController.self)") as! UserDetailBottomPopController
+            popoverVC.children1 = bottomTab.children
+            // 转场动画
+            popoverVC.modalPresentationStyle = .custom
+            let popoverAnimator = PopoverAnimator()
+            popoverVC.transitioningDelegate = popoverAnimator
+            present(popoverVC, animated: true, completion: nil)
+        }
+    }
+    
+    
 }

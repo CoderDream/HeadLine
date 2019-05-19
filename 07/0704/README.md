@@ -58,19 +58,70 @@ override func viewWillAppear(_ animated: Bool) {
 
 2. 新增一个背景图片视图 UIImageView，设置约束
 - top: 0
-- Leading(left): 0
+- Leading(left): -10
 - bottom: 0
-- Trailing(right): 0
+- Trailing(right): -10
 
-
-
-然后修改
-- Leading: -10
-- Trailing: -10
 - 设置界面如下：
 ![](https://raw.githubusercontent.com/CoderDream/HeadLine/master/snapshot/0704001.jpg)
 
+3. 设置背景图片
+
+设置 Slicing 属性：
+- Slices: Vertical
+- Center: Stretches
+ 
+4. 新增 TableView
+- top: 10
+- left: 0
+- bottom: 15
+- right: 0
+
+设置 Row Height: 40
+background: clear
+
+5. 详细代码  
+```swift
+import UIKit
+
+class UserDetailBottomPopController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var children1 = [BottomTabChildren]()
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var didSelectedChild: ((BottomTabChildren)->())?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "\(UITableViewCell.self)")
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return children1.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(UITableViewCell.self)", for: indexPath)
+        cell.selectionStyle = .none
+        let child = children1[indexPath.row]
+        cell.textLabel?.text = child.name
+        cell.textLabel?.textAlignment = .center
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 13)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+}
+```
+
+ 
+
 ## UserDetailViewController
+
 
 1. 新建扩展
 
@@ -84,5 +135,14 @@ extension UserDetailViewController: UserDetailBottomViewDelegate {
 
         }
     }   
+}
+```
+
+### PopoverAnimator  
+```swift
+import UIKit
+
+class PopoverAnimator: NSObject {
+    
 }
 ```

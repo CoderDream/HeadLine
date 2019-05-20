@@ -67,6 +67,12 @@ class UserDetailHeaderView: UIView, NibLoadable {
     /// 底部的 ScrollView
     //@IBOutlet weak var bottomScrollView: UIScrollView!
     
+    /// 自定义的推荐 View
+    fileprivate lazy var relationRecommendView: RelationRecommendView = {
+        let relationRecommendView = RelationRecommendView.loadViewFromNib()
+        return relationRecommendView
+    }()
+    
     /// 发私信按钮点击
     @IBAction func sendMailButtonClicked() {
         
@@ -107,8 +113,10 @@ class UserDetailHeaderView: UIView, NibLoadable {
                 }, completion: { (_) in
                     self.resetLayout()
                     // 点击了关注按钮，就会出现相关推荐数据
-                    NetworkTool.loadRelationUserRecommend(user_id: self.userDetail!.user_id, completionHandler: { (userCard) in
-                        
+                    NetworkTool.loadRelationUserRecommend(user_id: self.userDetail!.user_id, completionHandler: { (userCards) in
+                        // 添加推荐 View
+                        self.recommendView.addSubview(self.relationRecommendView)
+                        self.relationRecommendView.userCards = userCards
                     })
                 })
             })

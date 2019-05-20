@@ -20,6 +20,10 @@
 		3F1D60CC228EB41100C1B0A7 /* UserDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D60CB228EB41100C1B0A7 /* UserDetailBottomView.swift */; };
 		3F1D60CE229252FB00C1B0A7 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D60CD229252FB00C1B0A7 /* NavigationBarView.swift */; };
 		3F1D60D02292536A00C1B0A7 /* NavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D60CF2292536A00C1B0A7 /* NavigationBarView.xib */; };
+		3F1D60D222928A8600C1B0A7 /* RelationRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D60D122928A8600C1B0A7 /* RelationRecommendView.swift */; };
+		3F1D60D422928AA000C1B0A7 /* RelationRecommendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D60D322928AA000C1B0A7 /* RelationRecommendView.xib */; };
+		3F1D60D72292928B00C1B0A7 /* RelationRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D60D52292928B00C1B0A7 /* RelationRecommendCell.swift */; };
+		3F1D60D82292928B00C1B0A7 /* RelationRecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D60D62292928B00C1B0A7 /* RelationRecommendCell.xib */; };
 		3F3B63B522832F23006C8FC0 /* OfflineDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B63B422832F23006C8FC0 /* OfflineDownloadViewController.swift */; };
 		3F3B63B82283303E006C8FC0 /* OfflineDownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B63B62283303E006C8FC0 /* OfflineDownloadCell.swift */; };
 		3F3B63B92283303E006C8FC0 /* OfflineDownloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F3B63B72283303E006C8FC0 /* OfflineDownloadCell.xib */; };
@@ -79,6 +83,10 @@
 		3F1D60CB228EB41100C1B0A7 /* UserDetailBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailBottomView.swift; sourceTree = "<group>"; };
 		3F1D60CD229252FB00C1B0A7 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		3F1D60CF2292536A00C1B0A7 /* NavigationBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarView.xib; sourceTree = "<group>"; };
+		3F1D60D122928A8600C1B0A7 /* RelationRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationRecommendView.swift; sourceTree = "<group>"; };
+		3F1D60D322928AA000C1B0A7 /* RelationRecommendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelationRecommendView.xib; sourceTree = "<group>"; };
+		3F1D60D52292928B00C1B0A7 /* RelationRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationRecommendCell.swift; sourceTree = "<group>"; };
+		3F1D60D62292928B00C1B0A7 /* RelationRecommendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelationRecommendCell.xib; sourceTree = "<group>"; };
 		3F3B63B422832F23006C8FC0 /* OfflineDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDownloadViewController.swift; sourceTree = "<group>"; };
 		3F3B63B62283303E006C8FC0 /* OfflineDownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDownloadCell.swift; sourceTree = "<group>"; };
 		3F3B63B72283303E006C8FC0 /* OfflineDownloadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfflineDownloadCell.xib; sourceTree = "<group>"; };
@@ -415,6 +423,10 @@
 				3FC3B09022852349001F93A5 /* UserDetailHeaderView.xib */,
 				3F1D60CB228EB41100C1B0A7 /* UserDetailBottomView.swift */,
 				3F1D60CD229252FB00C1B0A7 /* NavigationBarView.swift */,
+				3F1D60D122928A8600C1B0A7 /* RelationRecommendView.swift */,
+				3F1D60D322928AA000C1B0A7 /* RelationRecommendView.xib */,
+				3F1D60D52292928B00C1B0A7 /* RelationRecommendCell.swift */,
+				3F1D60D62292928B00C1B0A7 /* RelationRecommendCell.xib */,
 				3F1D60CF2292536A00C1B0A7 /* NavigationBarView.xib */,
 			);
 			path = View;
@@ -498,6 +510,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1D60D82292928B00C1B0A7 /* RelationRecommendCell.xib in Resources */,
 				3F810B2822640FB100165D41 /* LaunchScreen.storyboard in Resources */,
 				3F077F7B227BFF8A009C47B5 /* MyConcernCell.xib in Resources */,
 				3F71D06E22815FDC00183873 /* SettingCell.xib in Resources */,
@@ -508,6 +521,7 @@
 				3FFF2112227ED4AA0054F12B /* default_theme.plist in Resources */,
 				3FC3B09122852349001F93A5 /* UserDetailHeaderView.xib in Resources */,
 				3FFF20E522781EB90054F12B /* MyFirstSectionCell.xib in Resources */,
+				3F1D60D422928AA000C1B0A7 /* RelationRecommendView.xib in Resources */,
 				3F71D0682281342C00183873 /* settingPlist.plist in Resources */,
 				3FFF2114227ED4DB0054F12B /* night_theme.plist in Resources */,
 				3F810B2522640FB100165D41 /* Assets.xcassets in Resources */,
@@ -600,6 +614,7 @@
 				3FF202F0228FAA5E00F769E2 /* UserDetailBottomPushController.swift in Sources */,
 				3F810C692264931800165D41 /* MyNavigationController.swift in Sources */,
 				3F3B63BB228332C6006C8FC0 /* HomeNewsTitle.swift in Sources */,
+				3F1D60D72292928B00C1B0A7 /* RelationRecommendCell.swift in Sources */,
 				3F077F6F227BE4D4009C47B5 /* UICollectionViewExtension.swift in Sources */,
 				3FC3B0872283D2EC001F93A5 /* SQLiteManager.swift in Sources */,
 				3FFF20E422781EB90054F12B /* MyFirstSectionCell.swift in Sources */,
@@ -622,6 +637,7 @@
 				3F810C6D2264931800165D41 /* AppDelegate.swift in Sources */,
 				3F00610A226605610033B010 /* UIColorExtension.swift in Sources */,
 				3F810C682264931800165D41 /* HuoshanViewController.swift in Sources */,
+				3F1D60D222928A8600C1B0A7 /* RelationRecommendView.swift in Sources */,
 				3FF202F2228FAE3800F769E2 /* UserDetailBottomPopController.swift in Sources */,
 				3FC3B08F228522F2001F93A5 /* UserDetailHeaderView.swift in Sources */,
 				3F810C6C2264931800165D41 /* MineViewController.swift in Sources */,

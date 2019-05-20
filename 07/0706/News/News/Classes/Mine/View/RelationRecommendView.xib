@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RelationRecommendView" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相关推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGB-0f-39a">
+                    <rect key="frame" x="15" y="0.0" width="360" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="6Fo-qG-rCf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6rI-sV-O9q">
+                    <rect key="frame" x="0.0" y="32" width="375" height="201"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cgh-ec-5IO">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oGB-0f-39a" secondAttribute="trailing" id="CHD-7w-lBT"/>
+                <constraint firstItem="oGB-0f-39a" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="O5W-ga-sAP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6rI-sV-O9q" secondAttribute="bottom" id="W3H-Bq-Heq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6rI-sV-O9q" secondAttribute="trailing" id="iet-Qj-7iH"/>
+                <constraint firstItem="6rI-sV-O9q" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="xHJ-db-O2P"/>
+                <constraint firstItem="6rI-sV-O9q" firstAttribute="top" secondItem="oGB-0f-39a" secondAttribute="bottom" id="yED-Vw-zWh"/>
+                <constraint firstItem="oGB-0f-39a" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="yGP-GD-yWn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="6rI-sV-O9q" id="Ybm-pC-DXq"/>
+                <outlet property="labelHeight" destination="6Fo-qG-rCf" id="hPI-D1-cHW"/>
+            </connections>
+        </view>
+    </objects>
+</document>

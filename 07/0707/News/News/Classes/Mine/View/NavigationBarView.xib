@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NavigationBarView" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoU-2t-ifc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Abo-gp-2V3"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybc-Zc-SOm">
+                    <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6be-xQ-CPr">
+                            <rect key="frame" x="15" y="4.5" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="6xn-kh-GZD"/>
+                                <constraint firstAttribute="width" constant="35" id="pKT-Sa-X5S"/>
+                            </constraints>
+                            <state key="normal" image="personal_home_back_white_24x24_"/>
+                            <connections>
+                                <action selector="returnButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="cXp-sl-P0T"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-fj-UEK">
+                            <rect key="frame" x="325" y="4.5" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="9yt-Kb-2bV"/>
+                                <constraint firstAttribute="width" constant="35" id="eqJ-pL-MUd"/>
+                            </constraints>
+                            <state key="normal" image="new_morewhite_titlebar_22x22_"/>
+                            <connections>
+                                <action selector="moreButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="4GV-n9-Gbk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="JJN-PF-7rq"/>
+                        <constraint firstItem="6be-xQ-CPr" firstAttribute="centerY" secondItem="ybc-Zc-SOm" secondAttribute="centerY" id="Uda-cB-JPc"/>
+                        <constraint firstItem="6be-xQ-CPr" firstAttribute="leading" secondItem="ybc-Zc-SOm" secondAttribute="leading" constant="15" id="VC7-Lf-F9y"/>
+                        <constraint firstItem="7ae-fj-UEK" firstAttribute="centerY" secondItem="6be-xQ-CPr" secondAttribute="centerY" id="aZj-wW-KfO"/>
+                        <constraint firstAttribute="trailing" secondItem="7ae-fj-UEK" secondAttribute="trailing" constant="15" id="ncd-uh-6a0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xoU-2t-ifc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5kt-73-nOR"/>
+                <constraint firstAttribute="trailing" secondItem="xoU-2t-ifc" secondAttribute="trailing" id="8CW-cw-JPj"/>
+                <constraint firstItem="xoU-2t-ifc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="STg-Kv-zU3"/>
+                <constraint firstAttribute="trailing" secondItem="ybc-Zc-SOm" secondAttribute="trailing" id="pE4-np-2pK"/>
+                <constraint firstItem="ybc-Zc-SOm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xIa-E2-7Ma"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="moreButton" destination="7ae-fj-UEK" id="bvy-XD-Dqs"/>
+                <outlet property="navigationBar" destination="ybc-Zc-SOm" id="zEr-Ng-ypC"/>
+                <outlet property="returnButton" destination="6be-xQ-CPr" id="oBg-9y-1x4"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="127.736131934033"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="new_morewhite_titlebar_22x22_" width="22" height="22"/>
+        <image name="personal_home_back_white_24x24_" width="24" height="24"/>
+    </resources>
+</document>

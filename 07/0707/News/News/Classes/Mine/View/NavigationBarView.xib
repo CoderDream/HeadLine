@@ -22,7 +22,7 @@
                         <constraint firstAttribute="height" constant="44" id="Abo-gp-2V3"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybc-Zc-SOm">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybc-Zc-SOm">
                     <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6be-xQ-CPr">
@@ -47,19 +47,51 @@
                                 <action selector="moreButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="4GV-n9-Gbk"/>
                             </connections>
                         </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVi-Tf-ju3">
+                            <rect key="frame" x="152.5" y="11.5" width="70" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="r3t-BD-Vcm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAH-2a-5Jf" customClass="AnimatableButton" customModule="IBAnimatable">
+                            <rect key="frame" x="232.5" y="8" width="72" height="28"/>
+                            <color key="backgroundColor" red="0.90196078430000004" green="0.3921568627" blue="0.37254901959999998" alpha="1" colorSpace="deviceRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="5t9-Uo-ltQ"/>
+                                <constraint firstAttribute="width" constant="72" id="rDf-Zp-F6f"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="关注"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="concernButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="7jZ-dF-0P9"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="JJN-PF-7rq"/>
+                        <constraint firstItem="iAH-2a-5Jf" firstAttribute="centerY" secondItem="QVi-Tf-ju3" secondAttribute="centerY" id="RyT-FM-tbR"/>
+                        <constraint firstItem="iAH-2a-5Jf" firstAttribute="leading" secondItem="QVi-Tf-ju3" secondAttribute="trailing" constant="10" id="Ub6-wm-wUp"/>
                         <constraint firstItem="6be-xQ-CPr" firstAttribute="centerY" secondItem="ybc-Zc-SOm" secondAttribute="centerY" id="Uda-cB-JPc"/>
                         <constraint firstItem="6be-xQ-CPr" firstAttribute="leading" secondItem="ybc-Zc-SOm" secondAttribute="leading" constant="15" id="VC7-Lf-F9y"/>
+                        <constraint firstItem="QVi-Tf-ju3" firstAttribute="centerX" secondItem="ybc-Zc-SOm" secondAttribute="centerX" id="VqB-Ig-xxL"/>
                         <constraint firstItem="7ae-fj-UEK" firstAttribute="centerY" secondItem="6be-xQ-CPr" secondAttribute="centerY" id="aZj-wW-KfO"/>
+                        <constraint firstItem="QVi-Tf-ju3" firstAttribute="centerY" secondItem="ybc-Zc-SOm" secondAttribute="centerY" id="iwU-iw-hJy"/>
                         <constraint firstAttribute="trailing" secondItem="7ae-fj-UEK" secondAttribute="trailing" constant="15" id="ncd-uh-6a0"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="ybc-Zc-SOm" secondAttribute="bottom" id="2vK-O1-AHC"/>
                 <constraint firstItem="xoU-2t-ifc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5kt-73-nOR"/>
                 <constraint firstAttribute="trailing" secondItem="xoU-2t-ifc" secondAttribute="trailing" id="8CW-cw-JPj"/>
                 <constraint firstItem="xoU-2t-ifc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="STg-Kv-zU3"/>
@@ -68,7 +100,9 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="concernButton" destination="iAH-2a-5Jf" id="AGk-Zj-cGu"/>
                 <outlet property="moreButton" destination="7ae-fj-UEK" id="bvy-XD-Dqs"/>
+                <outlet property="nameLabel" destination="QVi-Tf-ju3" id="tfO-dr-rNu"/>
                 <outlet property="navigationBar" destination="ybc-Zc-SOm" id="zEr-Ng-ypC"/>
                 <outlet property="returnButton" destination="6be-xQ-CPr" id="oBg-9y-1x4"/>
             </connections>

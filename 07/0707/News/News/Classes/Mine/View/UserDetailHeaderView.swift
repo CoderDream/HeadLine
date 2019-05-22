@@ -141,11 +141,12 @@ class UserDetailHeaderView: UIView, NibLoadable {
     @IBAction func unfoldButtonClicked() {
         unfoldButton.isHidden = true
         unfoldButtonWidth.constant = 0
+        relationRecommendView.labelHeight.constant = 0
         descriptionLabelHeight.constant = userDetail!.descriptionHeight!
         
         // UILabel填满一行后自动换行，三句代码搞定
         // https://blog.csdn.net/haha223545/article/details/80111109
-        descriptionLabel.lineBreakMode = NSLineBreakMode.byWordWrapping;
+        descriptionLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         descriptionLabel.numberOfLines = 0;
         
         UIView.animate(withDuration: 0.25, animations: {

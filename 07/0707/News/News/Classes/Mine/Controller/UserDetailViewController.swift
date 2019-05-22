@@ -56,6 +56,8 @@ class UserDetailViewController: UIViewController {
         NetworkTool.loadUserDetail(user_id: userId) { (userDetail) in
             self.userDetail = userDetail
             self.headerView.userDetail = userDetail
+            // 设置导航栏
+            self.navigationBar.userDetail = userDetail
             if userDetail.bottom_tab.count == 0 {
                 self.bottomViewBottom.constant = 0
                 self.view.layoutIfNeeded()
@@ -116,6 +118,19 @@ extension UserDetailViewController: UIScrollViewDelegate {
                 changeStatusBarStyle = .lightContent
                 navigationBar.returnButton.theme_setImage("images.personal_home_back_white_24x24_", forState: .normal)
                 navigationBar.moreButton.theme_setImage("images.new_morewhite_titlebar_22x22_", forState: .normal)
+            }
+            var alpha1: CGFloat = offsetY / 57
+            // 14 + 15 + 14
+            if offsetY >= 43 {
+                alpha1 = min(alpha1, 1.0)
+                navigationBar.nameLabel.isHidden = false
+                navigationBar.concernButton.isHidden = false
+                navigationBar.nameLabel.textColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: alpha1)
+                navigationBar.concernButton.alpha = alpha1
+            } else {
+                alpha1 = min(0.0, alpha1)
+                navigationBar.nameLabel.textColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: alpha1)
+                navigationBar.concernButton.alpha = alpha1
             }
         }
     }

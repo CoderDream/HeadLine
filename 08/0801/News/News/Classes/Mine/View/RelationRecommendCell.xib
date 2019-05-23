@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RelationRecommendCell" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="142" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="142" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFR-du-iGJ" customClass="AnimatableView" customModule="IBAnimatable">
+                        <rect key="frame" x="0.0" y="0.0" width="142" height="190"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bKC-YV-C2u" customClass="AnimatableImageView" customModule="IBAnimatable">
+                                <rect key="frame" x="38" y="10" width="66" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Ika-iB-aPh"/>
+                                    <constraint firstAttribute="width" constant="66" id="j60-9c-TiA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_maskType" value="Circle"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="all_v_avatar_star_16x16_" translatesAutoresizingMaskIntoConstraints="NO" id="5zx-vv-PnI">
+                                <rect key="frame" x="85" y="57" width="19" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="GXo-DZ-Ihg"/>
+                                    <constraint firstAttribute="width" constant="19" id="eFn-Ha-UK0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilc-JF-Bmn">
+                                <rect key="frame" x="0.0" y="81" width="142" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="QSw-MM-Mil"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTl-J3-0FC">
+                                <rect key="frame" x="0.0" y="104" width="142" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ina-7m-RBD" customClass="AnimatableButton" customModule="IBAnimatable">
+                                <rect key="frame" x="15" y="152" width="112" height="28"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.3921568627" blue="0.37254901959999998" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="5Pu-J2-dru"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="关注"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="concernButtonClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gIu-Z5-VJS"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_add_video_16x16_" translatesAutoresizingMaskIntoConstraints="NO" id="jXf-pZ-Any">
+                                <rect key="frame" x="60" y="155" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="6ol-O5-dTK"/>
+                                    <constraint firstAttribute="height" constant="22" id="y10-iF-1lK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ilc-JF-Bmn" firstAttribute="top" secondItem="bKC-YV-C2u" secondAttribute="bottom" constant="5" id="2Es-ze-vCo"/>
+                            <constraint firstItem="5zx-vv-PnI" firstAttribute="trailing" secondItem="bKC-YV-C2u" secondAttribute="trailing" id="5gc-s1-hX2"/>
+                            <constraint firstAttribute="bottom" secondItem="ina-7m-RBD" secondAttribute="bottom" constant="10" id="FfO-b3-omv"/>
+                            <constraint firstAttribute="trailing" secondItem="ilc-JF-Bmn" secondAttribute="trailing" id="Gvg-7B-Nva"/>
+                            <constraint firstItem="ina-7m-RBD" firstAttribute="leading" secondItem="jFR-du-iGJ" secondAttribute="leading" constant="15" id="NZq-ml-Nei"/>
+                            <constraint firstItem="ina-7m-RBD" firstAttribute="top" secondItem="hTl-J3-0FC" secondAttribute="bottom" constant="5" id="PEl-rh-moM"/>
+                            <constraint firstItem="bKC-YV-C2u" firstAttribute="centerX" secondItem="jFR-du-iGJ" secondAttribute="centerX" id="PpM-Yb-OKs"/>
+                            <constraint firstItem="jXf-pZ-Any" firstAttribute="centerY" secondItem="ina-7m-RBD" secondAttribute="centerY" id="QdD-eV-kM4"/>
+                            <constraint firstItem="5zx-vv-PnI" firstAttribute="bottom" secondItem="bKC-YV-C2u" secondAttribute="bottom" id="e1x-Gd-qne"/>
+                            <constraint firstAttribute="trailing" secondItem="hTl-J3-0FC" secondAttribute="trailing" id="eJr-ff-AvK"/>
+                            <constraint firstAttribute="trailing" secondItem="ina-7m-RBD" secondAttribute="trailing" constant="15" id="j7I-I1-9hs"/>
+                            <constraint firstItem="hTl-J3-0FC" firstAttribute="leading" secondItem="jFR-du-iGJ" secondAttribute="leading" id="jmg-KU-pAL"/>
+                            <constraint firstItem="ilc-JF-Bmn" firstAttribute="leading" secondItem="jFR-du-iGJ" secondAttribute="leading" id="ovO-8X-1h7"/>
+                            <constraint firstItem="hTl-J3-0FC" firstAttribute="top" secondItem="ilc-JF-Bmn" secondAttribute="bottom" id="sPg-SI-zaO"/>
+                            <constraint firstItem="jXf-pZ-Any" firstAttribute="centerX" secondItem="ina-7m-RBD" secondAttribute="centerX" id="toC-Gx-4nX"/>
+                            <constraint firstItem="bKC-YV-C2u" firstAttribute="top" secondItem="jFR-du-iGJ" secondAttribute="top" constant="10" id="ttV-2y-4Uz"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jFR-du-iGJ" secondAttribute="bottom" id="Fxd-h9-fal"/>
+                <constraint firstAttribute="trailing" secondItem="jFR-du-iGJ" secondAttribute="trailing" id="Peu-qR-YZC"/>
+                <constraint firstItem="jFR-du-iGJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hA1-uh-MTM"/>
+                <constraint firstItem="jFR-du-iGJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="v2J-om-HWO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="avatarImageView" destination="bKC-YV-C2u" id="u0Q-uH-PY9"/>
+                <outlet property="baseView" destination="jFR-du-iGJ" id="jYa-1u-Wo6"/>
+                <outlet property="concernButton" destination="ina-7m-RBD" id="lgZ-wV-nSS"/>
+                <outlet property="loadingImageView" destination="jXf-pZ-Any" id="1xo-Kc-qWy"/>
+                <outlet property="nameLabel" destination="ilc-JF-Bmn" id="627-gH-fRL"/>
+                <outlet property="recommendReasonLabel" destination="hTl-J3-0FC" id="gir-na-daZ"/>
+                <outlet property="vImageView" destination="5zx-vv-PnI" id="c3p-Ip-6nz"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="154.72263868065968"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="all_v_avatar_star_16x16_" width="16" height="16"/>
+        <image name="loading_add_video_16x16_" width="16" height="16"/>
+    </resources>
+</document>

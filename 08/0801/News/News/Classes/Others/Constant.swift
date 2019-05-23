@@ -9,6 +9,11 @@
 import UIKit
 
 /// 屏幕的宽度
+let screenWidth = UIScreen.main.bounds.width
+/// 屏幕的高度
+let screenHeight = UIScreen.main.bounds.height
+
+/// 屏幕的宽度
 let SCREEN_WIDTH = UIScreen.main.bounds.width
 /// 屏幕的宽度
 let SCREEN_HEIGHT = UIScreen.main.bounds.height
@@ -31,3 +36,9 @@ let topTabIndicatorWidth: CGFloat = 40
 let topTabIndicatorHeight: CGFloat = 2
 
 let MyPresentationControllerDismiss = "MyPresentationControllerDismiss"
+
+let image1Width: CGFloat = screenWidth * 0.5
+let image2Width: CGFloat = (screenWidth - 35) * 0.5
+let image3Width: CGFloat = (screenWidth - 40) / 3
+
+

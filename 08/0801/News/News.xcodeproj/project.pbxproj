@@ -28,6 +28,7 @@
 		3F3B63B82283303E006C8FC0 /* OfflineDownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B63B62283303E006C8FC0 /* OfflineDownloadCell.swift */; };
 		3F3B63B92283303E006C8FC0 /* OfflineDownloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F3B63B72283303E006C8FC0 /* OfflineDownloadCell.xib */; };
 		3F3B63BB228332C6006C8FC0 /* HomeNewsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B63BA228332C6006C8FC0 /* HomeNewsTitle.swift */; };
+		3F6656D622968075003D66D8 /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6656D522968075003D66D8 /* Calculate.swift */; };
 		3F71D0602280042800183873 /* MoreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F71D05F2280042800183873 /* MoreLoginViewController.swift */; };
 		3F71D0642280058000183873 /* MoreLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F71D0632280058000183873 /* MoreLoginViewController.storyboard */; };
 		3F71D0662281192A00183873 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F71D0652281192A00183873 /* SettingViewController.swift */; };
@@ -91,6 +92,7 @@
 		3F3B63B62283303E006C8FC0 /* OfflineDownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDownloadCell.swift; sourceTree = "<group>"; };
 		3F3B63B72283303E006C8FC0 /* OfflineDownloadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfflineDownloadCell.xib; sourceTree = "<group>"; };
 		3F3B63BA228332C6006C8FC0 /* HomeNewsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeNewsTitle.swift; path = News/Classes/Mine/View/HomeNewsTitle.swift; sourceTree = SOURCE_ROOT; };
+		3F6656D522968075003D66D8 /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
 		3F71D05F2280042800183873 /* MoreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLoginViewController.swift; sourceTree = "<group>"; };
 		3F71D0632280058000183873 /* MoreLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreLoginViewController.storyboard; sourceTree = "<group>"; };
 		3F71D0652281192A00183873 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				3F00610C22660DC90033B010 /* NetworkTool.swift */,
 				3FD86643227DD32400417362 /* MyTheme.swift */,
 				3FC3B0862283D2EC001F93A5 /* SQLiteManager.swift */,
+				3F6656D522968075003D66D8 /* Calculate.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				3F077F7D227C2807009C47B5 /* NoLoginHeaderView.swift in Sources */,
 				3FF202F0228FAA5E00F769E2 /* UserDetailBottomPushController.swift in Sources */,
 				3F810C692264931800165D41 /* MyNavigationController.swift in Sources */,
+				3F6656D622968075003D66D8 /* Calculate.swift in Sources */,
 				3F3B63BB228332C6006C8FC0 /* HomeNewsTitle.swift in Sources */,
 				3F1D60D72292928B00C1B0A7 /* RelationRecommendCell.swift in Sources */,
 				3F077F6F227BE4D4009C47B5 /* UICollectionViewExtension.swift in Sources */,
